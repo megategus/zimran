@@ -55,7 +55,7 @@ export function Checker({ samples, pricing }: { samples: Sample[]; pricing: Pric
     try { await job(); } catch (e) { setError((e as Error).message); } finally { setBusy(undefined); }
   };
 
-  const check = async (id: string, input: QuoteInput) => {
+  const check = async (id: string | undefined, input: QuoteInput) => {
     const data = await api<CheckResult>("/api/quotes/check", { method: "POST", body: JSON.stringify({ carId: id, ...input }) });
     setResult({ data, sample: "sampleId" in input });
   };
@@ -67,12 +67,12 @@ export function Checker({ samples, pricing }: { samples: Sample[]; pricing: Pric
     return saved;
   };
 
-  // A sample quote is checked against the car named on it, so warranty and schedule checks match.
+  // Without a carId the API checks a sample against the labeled sample car named on that quote.
   const runSample = (s: Sample) => run(`sample-${s.id}`, async () => {
-    const existing = cars.find((c) => c.year === s.year && c.model === s.model && c.mileage === s.mileage);
-    const car = existing ?? await addCar({ year: s.year, make: s.make, model: s.model, mileage: s.mileage, state: "TX", originalOwner: true });
-    setCarId(car.id);
-    await check(car.id, { sampleId: s.id });
+    await check(undefined, { sampleId: s.id });
+    const list = await api<GarageCar[]>("/api/cars");
+    setCars(list); setAdding(false);
+    setCarId(list.find((c) => c.year === s.year && c.make === s.make && c.model === s.model)?.id ?? list[0]?.id);
   });
 
   const loadDemo = () => run("demo", async () => {
