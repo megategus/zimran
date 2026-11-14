@@ -17,19 +17,24 @@ export const carInput = z.object({
 });
 export type CarInput = z.infer<typeof carInput>;
 
-type Row = Record<string, any>;
+// Shape of a `cars` row (db/migrations/0001_init.sql).
+export type CarRow = {
+  id: string; vin: string | null; year: number; make: string; model: string; trim: string | null;
+  drivetrain: Car['drivetrain'] | null; fuel: Car['fuel'] | null; state: string; mileage: number;
+  original_owner: boolean; purchase_date: string | null; is_sample?: boolean;
+};
 
-export const toRow = (c: Partial<CarInput>): Row => {
-  const row: Row = {
+export const toRow = (c: Partial<CarInput>): Partial<CarRow> => {
+  const row: Record<string, unknown> = {
     vin: c.vin?.toUpperCase(), year: c.year, make: c.make, model: c.model, trim: c.trim,
     drivetrain: c.drivetrain, fuel: c.fuel, state: c.state, mileage: c.mileage,
     original_owner: c.originalOwner, purchase_date: c.purchaseDate,
   };
   for (const k of Object.keys(row)) if (row[k] === undefined) delete row[k];
-  return row;
+  return row as Partial<CarRow>;
 };
 
-export const fromRow = (r: Row): Car & { isSample?: boolean } => ({
+export const fromRow = (r: CarRow): Car & { isSample?: boolean } => ({
   id: r.id, vin: r.vin ?? undefined, year: r.year, make: r.make, model: r.model, trim: r.trim ?? undefined,
   drivetrain: r.drivetrain ?? undefined, fuel: r.fuel ?? undefined, state: r.state, mileage: r.mileage,
   originalOwner: r.original_owner, purchaseDate: r.purchase_date ?? undefined,
