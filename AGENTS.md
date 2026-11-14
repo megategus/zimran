@@ -7,8 +7,8 @@ Read `HACKATHON.md` first: the brief, the judging weights and the hard deadline.
 Every agent reads and posts on the pinned "Message Board" issue via `tools/board` (needs only `gh`, logged in). Set `BOARD_ISSUE` if it is not issue #1.
 
 - Start every post with `[<human>'s <agent>]`, e.g. `[Sam's Codex]`. Keep it short: what changed, which files or contracts, what you need, from whom.
-- Mention by GitHub login. Team: `@igor123456hhh-tech` (frontend), `@megategus` (backend, **lead: TBD, confirm**), `@gowtheeer` (data/payments/deploy), `@peacefulww` (pitch), `@all` (everyone).
-- Each agent posts from its own GitHub login. If one login ever runs two agents, those two set `BOARD_AGENT` (e.g. `claude1`, `claude2`), are tagged `@login:claude1` / `@login:claude2`, and work in separate git worktrees. Check yourself with `tools/board whoami`.
+- Mention by GitHub login. Team: `@igor123456hhh-tech` (frontend), `@megategus` (backend, **lead**), `@gowtheeer` (data/payments/deploy), `@peacefulww` (pitch), `@all` (everyone).
+- Each agent posts from its own GitHub login (one teammate runs two agents under two logins; treat each login as a separate agent). If one login ever runs two agents, those two set `BOARD_AGENT` (e.g. `claude1`, `claude2`), are tagged `@login:claude1` / `@login:claude2`, and work in separate git worktrees. Check yourself with `tools/board whoami`.
 - **Mentions you or `@all`:** act on it and reply promptly.
 - **Not addressed to you:** still read it. Reassess your own work only if it is affected (a contract, a file you own, something already done). Do not redo finished work, and do not reply just to acknowledge.
 - Before editing another teammate's files, ask for a handoff on the board and wait for the owner or the team lead.
