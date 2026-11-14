@@ -2,7 +2,7 @@
 import profile from '../db/seed/demo_profile.json';
 import type { Car, QuoteLine, ServiceRecord } from './types';
 import { checkQuote } from './quote/check';
-import { duePlan } from './schedule/plan';
+import { remindersFor } from './records/save';
 import { db } from './db';
 
 const DAY = 86_400_000;
@@ -38,12 +38,7 @@ export function buildDemo(guestId: string, today: Date, newId: () => string = ()
     };
   });
 
-  const reminders = [...cars.values()].flatMap((car) => {
-    const plan = duePlan(car, historyOf(car.id), today);
-    return [...plan.filter((d) => d.overdue), ...plan.filter((d) => !d.overdue).slice(0, 2)].map((d) => ({
-      guest_id: guestId, car_id: car.id, service_key: d.jobKey, due_mileage: d.dueMiles ?? null, due_date: d.dueDate ?? null,
-    }));
-  });
+  const reminders = [...cars.values()].flatMap((car) => remindersFor(car, historyOf(car.id), today).map((r) => ({ ...r, guest_id: guestId })));
 
   return {
     carIds: [...cars.values()].map((c) => c.id),
@@ -80,4 +75,22 @@ export async function loadDemoProfile(guestId: string, today = new Date()): Prom
     if (error) throw new Error(`${table}: ${error.message}`);
   }
   return { carIds };
+}
+
+export type SampleId = keyof typeof profile.sampleCars;
+export const isSampleId = (id: string): id is SampleId => id in profile.sampleCars;
+
+/** The labeled sample car that matches sample quote `id` (Civic/Elantra/Camry), created for this guest on first use. */
+export async function ensureSampleCar(guestId: string, id: SampleId): Promise<string> {
+  const c = profile.sampleCars[id];
+  const found = await db().from('cars').select('id').eq('guest_id', guestId).eq('is_sample', true)
+    .eq('year', c.year).eq('make', c.make).eq('model', c.model).limit(1);
+  if (found.error) throw new Error(found.error.message);
+  if (found.data.length) return found.data[0].id;
+  const ins = await db().from('cars').insert({
+    guest_id: guestId, year: c.year, make: c.make, model: c.model, trim: c.trim, drivetrain: c.drivetrain, fuel: c.fuel,
+    state: c.state, mileage: c.mileage, original_owner: c.originalOwner, purchase_date: c.purchaseDate, is_sample: true,
+  }).select('id').single();
+  if (ins.error) throw new Error(ins.error.message);
+  return ins.data.id;
 }

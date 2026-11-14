@@ -7,6 +7,7 @@ import { getRecalls } from '@/lib/vehicle/recalls';
 import { QuoteParseError, parseQuote } from '@/lib/quote/parse';
 import { NoLinesError, checkQuote } from '@/lib/quote/check';
 import { duePlan } from '@/lib/schedule/plan';
+import { ensureSampleCar, isSampleId } from '@/lib/demo';
 import { fromRecordRow, type RecordRow } from '@/lib/records/rows';
 import sampleQuotes from '@/db/seed/sample_quotes.json';
 import type { Plan, QuoteVerdict } from '@/lib/types';
@@ -14,12 +15,13 @@ import type { Plan, QuoteVerdict } from '@/lib/types';
 export const maxDuration = 60; // photo parsing can take a while
 
 const Body = z.object({
-  carId: z.string().uuid(),
+  carId: z.string().uuid().optional(), // optional only with sampleId: then the matching sample car is used
   text: z.string().max(20_000).optional(),
   imageBase64: z.string().max(7_000_000).optional(), // ~5 MB image
   mediaType: z.enum(['image/jpeg', 'image/png', 'image/webp', 'image/gif']).optional(),
   sampleId: z.string().max(20).optional(),
-}).refine((b) => b.text?.trim() || b.imageBase64 || b.sampleId, { message: 'Send text, a photo or a sampleId' });
+}).refine((b) => b.text?.trim() || b.imageBase64 || b.sampleId, { message: 'Send text, a photo or a sampleId' })
+  .refine((b) => b.carId || b.sampleId, { message: 'carId is required unless sampleId is given' });
 
 const FREE_UNLOCKED_LINES = 2;
 
@@ -42,8 +44,10 @@ function forPlan(v: QuoteVerdict, plan: Plan) {
 export async function POST(req: NextRequest) {
   const parsed = Body.safeParse(await req.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ error: 'invalid', issues: parsed.error.issues }, { status: 400 });
-  const { carId, text, imageBase64, mediaType, sampleId } = parsed.data;
+  const { text, imageBase64, mediaType, sampleId } = parsed.data;
   const guestId = getGuestId(req);
+  if (sampleId && !isSampleId(sampleId)) return NextResponse.json({ error: 'unknown_sample' }, { status: 400 });
+  const carId = parsed.data.carId ?? await ensureSampleCar(guestId, sampleId as 'a' | 'b' | 'c');
 
   const { data: carRow } = await db().from('cars').select('*').eq('id', carId).eq('guest_id', guestId).maybeSingle<CarRow>();
   if (!carRow) return NextResponse.json({ error: 'not_found' }, { status: 404 });
