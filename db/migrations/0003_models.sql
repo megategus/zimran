@@ -38,7 +38,7 @@ create table model_guides (
   time_min int,
   tools text[] not null default '{}',
   parts text[] not null default '{}',
-  steps jsonb not null,
+  steps text[] not null,
   video_url text,
   source text not null
 );
