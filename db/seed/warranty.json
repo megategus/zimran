@@ -1,0 +1,281 @@
+[
+  {
+    "make": "Toyota",
+    "basic_years": 3,
+    "basic_miles": 36000,
+    "powertrain_years": 5,
+    "powertrain_miles": 60000,
+    "hybrid_years": 10,
+    "hybrid_miles": 150000,
+    "covered_jobs": {
+      "powertrain": [
+        "water_pump"
+      ],
+      "hybrid": [
+        "hybrid_battery"
+      ]
+    },
+    "source": "https://www.toyota.com/owners/warranty-owners-manuals",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Lexus",
+    "basic_years": 4,
+    "basic_miles": 50000,
+    "powertrain_years": 6,
+    "powertrain_miles": 70000,
+    "hybrid_years": 8,
+    "hybrid_miles": 100000,
+    "covered_jobs": {
+      "powertrain": [
+        "water_pump"
+      ],
+      "hybrid": [
+        "hybrid_battery"
+      ]
+    },
+    "source": "https://support.lexus.com/s/article/What-warranty-coverag-8315",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Honda",
+    "basic_years": 3,
+    "basic_miles": 36000,
+    "powertrain_years": 5,
+    "powertrain_miles": 60000,
+    "hybrid_years": 8,
+    "hybrid_miles": 100000,
+    "covered_jobs": {
+      "powertrain": [
+        "water_pump"
+      ],
+      "hybrid": [
+        "hybrid_battery"
+      ]
+    },
+    "source": "https://owners.honda.com/service-maintenance/warranty",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Ford",
+    "basic_years": 3,
+    "basic_miles": 36000,
+    "powertrain_years": 5,
+    "powertrain_miles": 60000,
+    "hybrid_years": 8,
+    "hybrid_miles": 100000,
+    "covered_jobs": {
+      "powertrain": [
+        "water_pump"
+      ],
+      "hybrid": [
+        "hybrid_battery"
+      ]
+    },
+    "source": "https://www.ford.com/support/category/warranty/",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Chevrolet",
+    "basic_years": 3,
+    "basic_miles": 36000,
+    "powertrain_years": 5,
+    "powertrain_miles": 60000,
+    "covered_jobs": {
+      "powertrain": [
+        "water_pump"
+      ]
+    },
+    "source": "https://www.chevrolet.com/owners/warranty",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "GMC",
+    "basic_years": 3,
+    "basic_miles": 36000,
+    "powertrain_years": 5,
+    "powertrain_miles": 60000,
+    "covered_jobs": {
+      "powertrain": [
+        "water_pump"
+      ]
+    },
+    "source": "https://www.gmc.com/warranty-protection",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Hyundai",
+    "basic_years": 5,
+    "basic_miles": 60000,
+    "powertrain_years": 10,
+    "powertrain_miles": 100000,
+    "powertrain_original_owner_only": {
+      "years": 5,
+      "miles": 60000
+    },
+    "hybrid_years": 10,
+    "hybrid_miles": 100000,
+    "covered_jobs": {
+      "powertrain": [
+        "water_pump"
+      ],
+      "hybrid": [
+        "hybrid_battery"
+      ]
+    },
+    "source": "https://www.hyundaiusa.com/us/en/assurance/america-best-warranty",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Kia",
+    "basic_years": 5,
+    "basic_miles": 60000,
+    "powertrain_years": 10,
+    "powertrain_miles": 100000,
+    "powertrain_original_owner_only": {
+      "years": 5,
+      "miles": 60000
+    },
+    "hybrid_years": 10,
+    "hybrid_miles": 100000,
+    "covered_jobs": {
+      "powertrain": [
+        "water_pump"
+      ],
+      "hybrid": [
+        "hybrid_battery"
+      ]
+    },
+    "source": "https://www.kia.com/us/en/warranty",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Mitsubishi",
+    "basic_years": 5,
+    "basic_miles": 60000,
+    "powertrain_years": 10,
+    "powertrain_miles": 100000,
+    "powertrain_original_owner_only": {
+      "years": 5,
+      "miles": 60000
+    },
+    "covered_jobs": {
+      "powertrain": [
+        "water_pump"
+      ]
+    },
+    "source": "https://www.mitsubishicars.com/what-drives-us/warranty",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Nissan",
+    "basic_years": 3,
+    "basic_miles": 36000,
+    "powertrain_years": 5,
+    "powertrain_miles": 60000,
+    "covered_jobs": {
+      "powertrain": [
+        "water_pump"
+      ]
+    },
+    "source": "https://www.nissanusa.com/owners/warranty-and-protection.html",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Subaru",
+    "basic_years": 3,
+    "basic_miles": 36000,
+    "powertrain_years": 5,
+    "powertrain_miles": 60000,
+    "covered_jobs": {
+      "powertrain": [
+        "water_pump"
+      ]
+    },
+    "source": "https://techinfo.subaru.com/stis/doc/warrantyBooklet/2025_war-_and_maint_112823b.pdf",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Mazda",
+    "basic_years": 3,
+    "basic_miles": 36000,
+    "powertrain_years": 5,
+    "powertrain_miles": 60000,
+    "covered_jobs": {
+      "powertrain": [
+        "water_pump"
+      ]
+    },
+    "source": "https://www.mazdausa.com/owners/warranty",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Volkswagen",
+    "basic_years": 4,
+    "basic_miles": 50000,
+    "powertrain_years": 4,
+    "powertrain_miles": 50000,
+    "covered_jobs": {
+      "powertrain": [
+        "water_pump"
+      ]
+    },
+    "source": "https://www.vw.com/en/owners-and-services/ownership-benefits/carefree-coverage.html",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Jeep",
+    "basic_years": 3,
+    "basic_miles": 36000,
+    "powertrain_years": 5,
+    "powertrain_miles": 60000,
+    "covered_jobs": {
+      "powertrain": [
+        "water_pump"
+      ]
+    },
+    "source": "https://www.jeep.com/warranty.html",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Ram",
+    "basic_years": 3,
+    "basic_miles": 36000,
+    "powertrain_years": 5,
+    "powertrain_miles": 60000,
+    "covered_jobs": {
+      "powertrain": [
+        "water_pump"
+      ]
+    },
+    "source": "https://www.ramtrucks.com/warranty.html",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "BMW",
+    "basic_years": 4,
+    "basic_miles": 50000,
+    "powertrain_years": 4,
+    "powertrain_miles": 50000,
+    "covered_jobs": {
+      "powertrain": [
+        "water_pump"
+      ]
+    },
+    "source": "https://shop.bmwusa.com/support-and-policy/warranty-information.html",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "federal_emissions",
+    "basic_years": 8,
+    "basic_miles": 80000,
+    "covered_jobs": {
+      "emissions": [
+        "catalytic_converter",
+        "ecu"
+      ]
+    },
+    "source": "https://19january2021snapshot.epa.gov/sites/static/files/2013-08/documents/420f09048.pdf",
+    "as_of": "2026-11-14"
+  }
+]

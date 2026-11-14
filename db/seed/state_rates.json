@@ -1,0 +1,410 @@
+[
+  {
+    "state": "AL",
+    "tech_wage_hourly": 24.53,
+    "shop_rate_low": 100,
+    "shop_rate_high": 145,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS010000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "AK",
+    "tech_wage_hourly": 31.55,
+    "shop_rate_low": 125,
+    "shop_rate_high": 190,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS020000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "AZ",
+    "tech_wage_hourly": 26.77,
+    "shop_rate_low": 105,
+    "shop_rate_high": 160,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS040000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "AR",
+    "tech_wage_hourly": 23.28,
+    "shop_rate_low": 95,
+    "shop_rate_high": 140,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS050000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "CA",
+    "tech_wage_hourly": 31.47,
+    "shop_rate_low": 125,
+    "shop_rate_high": 190,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS060000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "CO",
+    "tech_wage_hourly": 30.76,
+    "shop_rate_low": 125,
+    "shop_rate_high": 185,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS080000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "CT",
+    "tech_wage_hourly": 28.92,
+    "shop_rate_low": 115,
+    "shop_rate_high": 175,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS090000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "DE",
+    "tech_wage_hourly": 28.12,
+    "shop_rate_low": 110,
+    "shop_rate_high": 170,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS100000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "DC",
+    "tech_wage_hourly": 32.65,
+    "shop_rate_low": 130,
+    "shop_rate_high": 195,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS110000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "FL",
+    "tech_wage_hourly": 25.84,
+    "shop_rate_low": 105,
+    "shop_rate_high": 155,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS120000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "GA",
+    "tech_wage_hourly": 27.21,
+    "shop_rate_low": 110,
+    "shop_rate_high": 165,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS130000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "HI",
+    "tech_wage_hourly": 27.01,
+    "shop_rate_low": 110,
+    "shop_rate_high": 160,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS150000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "ID",
+    "tech_wage_hourly": 25.96,
+    "shop_rate_low": 105,
+    "shop_rate_high": 155,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS160000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "IL",
+    "tech_wage_hourly": 27.25,
+    "shop_rate_low": 110,
+    "shop_rate_high": 165,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS170000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "IN",
+    "tech_wage_hourly": 25.82,
+    "shop_rate_low": 105,
+    "shop_rate_high": 155,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS180000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "IA",
+    "tech_wage_hourly": 26.59,
+    "shop_rate_low": 105,
+    "shop_rate_high": 160,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS190000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "KS",
+    "tech_wage_hourly": 25.37,
+    "shop_rate_low": 100,
+    "shop_rate_high": 150,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS200000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "KY",
+    "tech_wage_hourly": 23.07,
+    "shop_rate_low": 90,
+    "shop_rate_high": 140,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS210000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "LA",
+    "tech_wage_hourly": 24.35,
+    "shop_rate_low": 95,
+    "shop_rate_high": 145,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS220000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "ME",
+    "tech_wage_hourly": 26.54,
+    "shop_rate_low": 105,
+    "shop_rate_high": 160,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS230000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "MD",
+    "tech_wage_hourly": 28.55,
+    "shop_rate_low": 115,
+    "shop_rate_high": 170,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS240000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "MA",
+    "tech_wage_hourly": 30.27,
+    "shop_rate_low": 120,
+    "shop_rate_high": 180,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS250000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "MI",
+    "tech_wage_hourly": 27.16,
+    "shop_rate_low": 110,
+    "shop_rate_high": 165,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS260000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "MN",
+    "tech_wage_hourly": 28.51,
+    "shop_rate_low": 115,
+    "shop_rate_high": 170,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS270000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "MS",
+    "tech_wage_hourly": 21.95,
+    "shop_rate_low": 90,
+    "shop_rate_high": 130,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS280000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "MO",
+    "tech_wage_hourly": 25.94,
+    "shop_rate_low": 105,
+    "shop_rate_high": 155,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS290000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "MT",
+    "tech_wage_hourly": 28.51,
+    "shop_rate_low": 115,
+    "shop_rate_high": 170,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS300000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "NE",
+    "tech_wage_hourly": 26.65,
+    "shop_rate_low": 105,
+    "shop_rate_high": 160,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS310000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "NV",
+    "tech_wage_hourly": 26.97,
+    "shop_rate_low": 110,
+    "shop_rate_high": 160,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS320000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "NH",
+    "tech_wage_hourly": 29.18,
+    "shop_rate_low": 115,
+    "shop_rate_high": 175,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS330000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "NJ",
+    "tech_wage_hourly": 28.28,
+    "shop_rate_low": 115,
+    "shop_rate_high": 170,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS340000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "NM",
+    "tech_wage_hourly": 24.9,
+    "shop_rate_low": 100,
+    "shop_rate_high": 150,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS350000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "NY",
+    "tech_wage_hourly": 28.42,
+    "shop_rate_low": 115,
+    "shop_rate_high": 170,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS360000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "NC",
+    "tech_wage_hourly": 25.72,
+    "shop_rate_low": 105,
+    "shop_rate_high": 155,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS370000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "ND",
+    "tech_wage_hourly": 27.88,
+    "shop_rate_low": 110,
+    "shop_rate_high": 165,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS380000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "OH",
+    "tech_wage_hourly": 26.24,
+    "shop_rate_low": 105,
+    "shop_rate_high": 155,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS390000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "OK",
+    "tech_wage_hourly": 25.04,
+    "shop_rate_low": 100,
+    "shop_rate_high": 150,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS400000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "OR",
+    "tech_wage_hourly": 30.39,
+    "shop_rate_low": 120,
+    "shop_rate_high": 180,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS410000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "PA",
+    "tech_wage_hourly": 26.13,
+    "shop_rate_low": 105,
+    "shop_rate_high": 155,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS420000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "RI",
+    "tech_wage_hourly": 26.11,
+    "shop_rate_low": 105,
+    "shop_rate_high": 155,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS440000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "SC",
+    "tech_wage_hourly": 25.2,
+    "shop_rate_low": 100,
+    "shop_rate_high": 150,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS450000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "SD",
+    "tech_wage_hourly": 26.76,
+    "shop_rate_low": 105,
+    "shop_rate_high": 160,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS460000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "TN",
+    "tech_wage_hourly": 26.25,
+    "shop_rate_low": 105,
+    "shop_rate_high": 160,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS470000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "TX",
+    "tech_wage_hourly": 25.47,
+    "shop_rate_low": 100,
+    "shop_rate_high": 155,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS480000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "UT",
+    "tech_wage_hourly": 24.85,
+    "shop_rate_low": 100,
+    "shop_rate_high": 150,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS490000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "VT",
+    "tech_wage_hourly": 27.9,
+    "shop_rate_low": 110,
+    "shop_rate_high": 165,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS500000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "VA",
+    "tech_wage_hourly": 29.62,
+    "shop_rate_low": 120,
+    "shop_rate_high": 180,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS510000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "WA",
+    "tech_wage_hourly": 30.03,
+    "shop_rate_low": 120,
+    "shop_rate_high": 180,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS530000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "WV",
+    "tech_wage_hourly": 21.19,
+    "shop_rate_low": 85,
+    "shop_rate_high": 125,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS540000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "WI",
+    "tech_wage_hourly": 27.35,
+    "shop_rate_low": 110,
+    "shop_rate_high": 165,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS550000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  },
+  {
+    "state": "WY",
+    "tech_wage_hourly": 26.59,
+    "shop_rate_low": 105,
+    "shop_rate_high": 160,
+    "source": "assumption: BLS OEWS May 2025 mean hourly wage, SOC 49-3023 (series OEUS560000000000049302303), x4 to x6 shop markup. https://www.bls.gov/oes/",
+    "as_of": "2025-05-01"
+  }
+]
