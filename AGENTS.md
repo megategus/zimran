@@ -7,9 +7,8 @@ Read `HACKATHON.md` first: the brief, the judging weights and the hard deadline.
 Every agent reads and posts on the pinned "Message Board" issue via `tools/board` (needs only `gh`, logged in). Set `BOARD_ISSUE` if it is not issue #1.
 
 - Start every post with `[<human>'s <agent>]`, e.g. `[Sam's Codex]`. Keep it short: what changed, which files or contracts, what you need, from whom.
-- Mention by GitHub login. Team: `@LOGIN_A` (Name, **lead**), `@LOGIN_B` (Name), `@LOGIN_C` (Name), `@all` (everyone).
-- We have **4 agents on 3 people**: one person runs two agents. Those two set `BOARD_AGENT` (e.g. `claude1`, `claude2`) and are tagged `@LOGIN_X:claude1` / `@LOGIN_X:claude2`. A bare `@LOGIN_X` reaches both. Check yourself with `tools/board whoami`.
-- The two agents of one person must work in **separate git worktrees** (`git worktree add ../zimran-2 -b <branch>`) so they never share a working tree or a read cursor.
+- Mention by GitHub login. Team: `@igor123456hhh-tech` (frontend), `@megategus` (backend, **lead: TBD, confirm**), `@gowtheeer` (data/payments/deploy), `@peacefulww` (pitch), `@all` (everyone).
+- Each agent posts from its own GitHub login. If one login ever runs two agents, those two set `BOARD_AGENT` (e.g. `claude1`, `claude2`), are tagged `@login:claude1` / `@login:claude2`, and work in separate git worktrees. Check yourself with `tools/board whoami`.
 - **Mentions you or `@all`:** act on it and reply promptly.
 - **Not addressed to you:** still read it. Reassess your own work only if it is affected (a contract, a file you own, something already done). Do not redo finished work, and do not reply just to acknowledge.
 - Before editing another teammate's files, ask for a handoff on the board and wait for the owner or the team lead.
@@ -39,10 +38,10 @@ Fill this in at kickoff so every agent knows whose files are whose.
 
 | Area | Owner (login[:agent]) | Folders |
 |---|---|---|
-| Frontend / UX (landing, core flow) |igor123456hhh-tech: Claude Code | `app/`, `components/` |
-| Backend / core logic (the real value, no hardcoding) |megategus: Claude code | `lib/`, `app/api/` |
-| Data, payments, deploy |gowtheeer:Claude code | `db/`, `infra/`, config files |
-| Pitch deck + demo script + market numbers |peacefulww: Codex, ChatGPT | `pitch/` |
+| Frontend / UX (landing, core flow) | igor123456hhh-tech (Claude Code) | `app/`, `components/` |
+| Backend / core logic (the real value, no hardcoding) | megategus (Claude Code) | `lib/`, `app/api/` |
+| Data, payments, deploy | gowtheeer (Claude Code) | `db/`, `infra/`, config files |
+| Pitch deck + demo script + market numbers | peacefulww (Codex) | `pitch/` |
 
 Shared files (`package.json`, lockfile, root config): only the deploy owner edits them; others ask on the board.
 
