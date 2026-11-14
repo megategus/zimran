@@ -1,0 +1,921 @@
+{
+  "models": [
+    {
+      "id": "2019-ford-f-150-2.7-4wd",
+      "year": 2019,
+      "make": "Ford",
+      "model": "F-150",
+      "engine": "2.7L EcoBoost twin-turbo V6",
+      "drivetrain": "4wd",
+      "fuel": "gas",
+      "oil_spec": "SAE 5W-30, Ford WSS-M2C946-B1",
+      "oil_capacity_qt": 6,
+      "tire_size": "265/70R17",
+      "tire_pressure_psi": 35,
+      "msrp_cents": 4400000,
+      "source": "assumption: drafted from the 2019 Ford F-150 owner manual and maintenance schedule; needs a person's check; MSRP approx. for XLT SuperCrew 4x4",
+      "as_of": "2026-11-14"
+    },
+    {
+      "id": "2020-chevrolet-silverado-1500-5.3-4wd",
+      "year": 2020,
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "engine": "5.3L V8 with Dynamic Fuel Management",
+      "drivetrain": "4wd",
+      "fuel": "gas",
+      "oil_spec": "SAE 0W-20, dexos1 Gen 2",
+      "oil_capacity_qt": 8,
+      "tire_size": "265/70R17",
+      "tire_pressure_psi": 35,
+      "msrp_cents": 4500000,
+      "source": "assumption: drafted from the 2020 Chevrolet Silverado 1500 owner manual and maintenance schedule; needs a person's check; MSRP approx. for LT Crew Cab 4x4",
+      "as_of": "2026-11-14"
+    },
+    {
+      "id": "2021-toyota-rav4-hybrid-awd",
+      "year": 2021,
+      "make": "Toyota",
+      "model": "RAV4 Hybrid",
+      "engine": "2.5L 4-cyl hybrid (A25A-FXS), electric AWD",
+      "drivetrain": "awd",
+      "fuel": "hybrid",
+      "oil_spec": "SAE 0W-16",
+      "oil_capacity_qt": 4.8,
+      "tire_size": "225/60R18",
+      "tire_pressure_psi": 35,
+      "msrp_cents": 3100000,
+      "source": "assumption: drafted from the 2021 Toyota RAV4 Hybrid owner manual and maintenance schedule; needs a person's check; MSRP approx. for XLE Hybrid",
+      "as_of": "2026-11-14"
+    }
+  ],
+  "model_schedule": [
+    {
+      "model_id": "2019-ford-f-150-2.7-4wd",
+      "job_key": "oil_change",
+      "interval_miles": 10000,
+      "interval_months": 12,
+      "severe_interval_miles": 5000,
+      "notes": "Follow the Intelligent Oil-Life Monitor; 5,000 mi when towing",
+      "source": "assumption: drafted from the 2019 Ford F-150 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2019-ford-f-150-2.7-4wd",
+      "job_key": "tire_rotation",
+      "interval_miles": 10000,
+      "interval_months": 12,
+      "severe_interval_miles": 5000,
+      "notes": null,
+      "source": "assumption: drafted from the 2019 Ford F-150 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2019-ford-f-150-2.7-4wd",
+      "job_key": "engine_air_filter",
+      "interval_miles": 30000,
+      "interval_months": null,
+      "severe_interval_miles": 15000,
+      "notes": "Dusty roads: inspect every oil change",
+      "source": "assumption: drafted from the 2019 Ford F-150 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2019-ford-f-150-2.7-4wd",
+      "job_key": "cabin_air_filter",
+      "interval_miles": 20000,
+      "interval_months": null,
+      "severe_interval_miles": null,
+      "notes": null,
+      "source": "assumption: drafted from the 2019 Ford F-150 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2019-ford-f-150-2.7-4wd",
+      "job_key": "spark_plugs",
+      "interval_miles": 60000,
+      "interval_months": null,
+      "severe_interval_miles": null,
+      "notes": "EcoBoost engines use a shorter plug interval than the V8",
+      "source": "assumption: drafted from the 2019 Ford F-150 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2019-ford-f-150-2.7-4wd",
+      "job_key": "coolant_flush",
+      "interval_miles": 100000,
+      "interval_months": 120,
+      "severe_interval_miles": null,
+      "notes": "First change; then every 50,000 mi / 5 yr",
+      "source": "assumption: drafted from the 2019 Ford F-150 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2019-ford-f-150-2.7-4wd",
+      "job_key": "transmission_fluid",
+      "interval_miles": 150000,
+      "interval_months": null,
+      "severe_interval_miles": 30000,
+      "notes": "10-speed 10R80; severe schedule when towing",
+      "source": "assumption: drafted from the 2019 Ford F-150 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2020-chevrolet-silverado-1500-5.3-4wd",
+      "job_key": "oil_change",
+      "interval_miles": 7500,
+      "interval_months": 12,
+      "severe_interval_miles": 5000,
+      "notes": "Follow the Oil Life System",
+      "source": "assumption: drafted from the 2020 Chevrolet Silverado 1500 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2020-chevrolet-silverado-1500-5.3-4wd",
+      "job_key": "tire_rotation",
+      "interval_miles": 7500,
+      "interval_months": 12,
+      "severe_interval_miles": null,
+      "notes": null,
+      "source": "assumption: drafted from the 2020 Chevrolet Silverado 1500 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2020-chevrolet-silverado-1500-5.3-4wd",
+      "job_key": "engine_air_filter",
+      "interval_miles": 45000,
+      "interval_months": 48,
+      "severe_interval_miles": 22500,
+      "notes": null,
+      "source": "assumption: drafted from the 2020 Chevrolet Silverado 1500 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2020-chevrolet-silverado-1500-5.3-4wd",
+      "job_key": "cabin_air_filter",
+      "interval_miles": 22500,
+      "interval_months": 24,
+      "severe_interval_miles": null,
+      "notes": null,
+      "source": "assumption: drafted from the 2020 Chevrolet Silverado 1500 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2020-chevrolet-silverado-1500-5.3-4wd",
+      "job_key": "spark_plugs",
+      "interval_miles": 97500,
+      "interval_months": null,
+      "severe_interval_miles": null,
+      "notes": null,
+      "source": "assumption: drafted from the 2020 Chevrolet Silverado 1500 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2020-chevrolet-silverado-1500-5.3-4wd",
+      "job_key": "coolant_flush",
+      "interval_miles": 150000,
+      "interval_months": 60,
+      "severe_interval_miles": null,
+      "notes": "DEX-COOL",
+      "source": "assumption: drafted from the 2020 Chevrolet Silverado 1500 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2020-chevrolet-silverado-1500-5.3-4wd",
+      "job_key": "transmission_fluid",
+      "interval_miles": 97500,
+      "interval_months": null,
+      "severe_interval_miles": 45000,
+      "notes": "Severe: towing, heavy traffic, hot climate",
+      "source": "assumption: drafted from the 2020 Chevrolet Silverado 1500 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2021-toyota-rav4-hybrid-awd",
+      "job_key": "oil_change",
+      "interval_miles": 10000,
+      "interval_months": 12,
+      "severe_interval_miles": 5000,
+      "notes": "0W-16 only",
+      "source": "assumption: drafted from the 2021 Toyota RAV4 Hybrid owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2021-toyota-rav4-hybrid-awd",
+      "job_key": "tire_rotation",
+      "interval_miles": 5000,
+      "interval_months": 6,
+      "severe_interval_miles": null,
+      "notes": null,
+      "source": "assumption: drafted from the 2021 Toyota RAV4 Hybrid owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2021-toyota-rav4-hybrid-awd",
+      "job_key": "engine_air_filter",
+      "interval_miles": 30000,
+      "interval_months": 36,
+      "severe_interval_miles": 15000,
+      "notes": null,
+      "source": "assumption: drafted from the 2021 Toyota RAV4 Hybrid owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2021-toyota-rav4-hybrid-awd",
+      "job_key": "cabin_air_filter",
+      "interval_miles": 30000,
+      "interval_months": 36,
+      "severe_interval_miles": 15000,
+      "notes": null,
+      "source": "assumption: drafted from the 2021 Toyota RAV4 Hybrid owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2021-toyota-rav4-hybrid-awd",
+      "job_key": "spark_plugs",
+      "interval_miles": 120000,
+      "interval_months": null,
+      "severe_interval_miles": null,
+      "notes": null,
+      "source": "assumption: drafted from the 2021 Toyota RAV4 Hybrid owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2021-toyota-rav4-hybrid-awd",
+      "job_key": "coolant_flush",
+      "interval_miles": 100000,
+      "interval_months": 120,
+      "severe_interval_miles": null,
+      "notes": "Engine coolant first change; then every 50,000 mi",
+      "source": "assumption: drafted from the 2021 Toyota RAV4 Hybrid owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2021-toyota-rav4-hybrid-awd",
+      "job_key": "hybrid_inverter_coolant",
+      "interval_miles": 150000,
+      "interval_months": 120,
+      "severe_interval_miles": null,
+      "notes": "Separate inverter cooling loop",
+      "source": "assumption: drafted from the 2021 Toyota RAV4 Hybrid owner manual and maintenance schedule; needs a person's check"
+    }
+  ],
+  "model_guides": [
+    {
+      "model_id": "2019-ford-f-150-2.7-4wd",
+      "job_key": "oil_change",
+      "kind": "maintenance",
+      "title": "Change engine oil and filter",
+      "difficulty": "medium",
+      "time_min": 45,
+      "tools": [
+        "Socket set",
+        "Oil filter wrench",
+        "Drain pan",
+        "Funnel",
+        "Jack stands or ramps"
+      ],
+      "parts": [
+        "6 qt 5W-30",
+        "Oil filter",
+        "Drain plug gasket"
+      ],
+      "steps": [
+        "Warm the engine 2 minutes, then shut it off and park on level ground.",
+        "Raise the vehicle safely on ramps or jack stands.",
+        "Remove the drain plug and let the oil drain into the pan.",
+        "Remove the old filter (cartridge-style spin-on filter under the front of the engine), oil the new gasket and fit it hand-tight.",
+        "Refit the drain plug with a new gasket and torque to spec.",
+        "Fill with 6 qt of 5W-30, run 30 s, check for leaks, recheck the dipstick.",
+        "Reset the oil-life monitor in the instrument cluster menu."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Ford",
+      "source": "assumption: drafted from the 2019 Ford F-150 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2019-ford-f-150-2.7-4wd",
+      "job_key": "engine_air_filter",
+      "kind": "maintenance",
+      "title": "Replace engine air filter",
+      "difficulty": "easy",
+      "time_min": 10,
+      "tools": [
+        "Screwdriver (some clips)"
+      ],
+      "parts": [
+        "Engine air filter"
+      ],
+      "steps": [
+        "Open the hood and find the air box next to the engine.",
+        "Release the clips on the air box lid.",
+        "Lift out the old filter and wipe debris from the box.",
+        "Seat the new filter with the rubber edge all the way round.",
+        "Close the lid and lock every clip."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Ford",
+      "source": "assumption: drafted from the 2019 Ford F-150 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2019-ford-f-150-2.7-4wd",
+      "job_key": "cabin_air_filter",
+      "kind": "maintenance",
+      "title": "Replace cabin air filter",
+      "difficulty": "easy",
+      "time_min": 15,
+      "tools": [
+        "None"
+      ],
+      "parts": [
+        "Cabin air filter"
+      ],
+      "steps": [
+        "Open the glove box, release the stops, and remove the filter cover behind it.",
+        "Slide out the old filter and note the airflow arrow.",
+        "Insert the new filter with the arrow pointing the same way.",
+        "Refit the cover or glove box."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Ford",
+      "source": "assumption: drafted from the 2019 Ford F-150 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2019-ford-f-150-2.7-4wd",
+      "job_key": "tire_rotation",
+      "kind": "maintenance",
+      "title": "Rotate tires",
+      "difficulty": "medium",
+      "time_min": 45,
+      "tools": [
+        "Floor jack",
+        "Jack stands",
+        "Lug wrench",
+        "Torque wrench",
+        "Tire gauge"
+      ],
+      "parts": [],
+      "steps": [
+        "Loosen the lug nuts a half turn on all four wheels.",
+        "Raise the vehicle and support it on jack stands.",
+        "Move the wheels front-to-rear on the same side (rearward cross for 4WD trucks).",
+        "Hand-tighten, lower, then torque the lug nuts in a star pattern.",
+        "Set all tires to 35 psi cold, per the door-jamb placard."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Ford",
+      "source": "assumption: drafted from the 2019 Ford F-150 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2019-ford-f-150-2.7-4wd",
+      "job_key": "wiper_blades",
+      "kind": "maintenance",
+      "title": "Replace wiper blades",
+      "difficulty": "easy",
+      "time_min": 10,
+      "tools": [
+        "None"
+      ],
+      "parts": [
+        "22 in + 22 in blades"
+      ],
+      "steps": [
+        "Lift the wiper arm off the windshield.",
+        "Press the release tab and slide the old blade off the hook.",
+        "Slide the new blade on until it clicks.",
+        "Lower the arm gently and test the wipers."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Ford",
+      "source": "assumption: drafted from the 2019 Ford F-150 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2019-ford-f-150-2.7-4wd",
+      "job_key": "battery",
+      "kind": "repair",
+      "title": "Test and replace the 12V battery",
+      "difficulty": "medium",
+      "time_min": 30,
+      "tools": [
+        "Multimeter",
+        "10 mm wrench",
+        "Battery terminal brush"
+      ],
+      "parts": [
+        "12V battery (same group size)"
+      ],
+      "steps": [
+        "With the engine off for an hour, measure the battery: 12.6 V is full, below 12.2 V is weak.",
+        "Disconnect the negative terminal first, then the positive.",
+        "Remove the hold-down and lift the battery out.",
+        "Clean the terminals, fit the new battery and the hold-down.",
+        "Connect positive first, then negative. Most parts stores recycle the old battery."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Ford",
+      "source": "assumption: drafted from the 2019 Ford F-150 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2019-ford-f-150-2.7-4wd",
+      "job_key": "brake_pads_front",
+      "kind": "repair",
+      "title": "Replace front brake pads",
+      "difficulty": "hard",
+      "time_min": 90,
+      "tools": [
+        "Floor jack",
+        "Jack stands",
+        "Socket set",
+        "C-clamp or piston tool",
+        "Torque wrench"
+      ],
+      "parts": [
+        "Front brake pads",
+        "Brake cleaner",
+        "Caliper grease"
+      ],
+      "steps": [
+        "Raise the front and remove the wheels.",
+        "Remove the caliper bolts and hang the caliper; never let it hang by the hose.",
+        "Remove the old pads, check rotor thickness against the minimum stamped on it.",
+        "Push the piston back, fit the new pads with grease on the contact points.",
+        "Refit the caliper and torque the bolts, refit the wheels.",
+        "Pump the brake pedal until firm before driving, then bed in the pads with gentle stops."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Ford",
+      "source": "assumption: drafted from the 2019 Ford F-150 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2019-ford-f-150-2.7-4wd",
+      "job_key": null,
+      "kind": "repair",
+      "title": "Check 2.7L EcoBoost oil consumption and PCV",
+      "difficulty": "medium",
+      "time_min": 30,
+      "tools": [
+        "Flashlight",
+        "Clean rag"
+      ],
+      "parts": [],
+      "steps": [
+        "Check the dipstick at every fill-up for 1,000 mi and log the level.",
+        "More than 1 qt per 3,000 mi is excessive; note any blue smoke at start-up.",
+        "Inspect the PCV hose and valve on the driver side for oil residue or cracks.",
+        "Look for oil seeping at the composite oil pan seam.",
+        "Bring the log to a Ford dealer: a leaking oil pan or PCV fault may be covered by the 5 yr / 60k powertrain warranty."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Ford",
+      "source": "assumption: drafted from the 2019 Ford F-150 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2020-chevrolet-silverado-1500-5.3-4wd",
+      "job_key": "oil_change",
+      "kind": "maintenance",
+      "title": "Change engine oil and filter",
+      "difficulty": "medium",
+      "time_min": 45,
+      "tools": [
+        "Socket set",
+        "Oil filter wrench",
+        "Drain pan",
+        "Funnel",
+        "Jack stands or ramps"
+      ],
+      "parts": [
+        "8 qt 0W-20 dexos1 Gen 2",
+        "Oil filter",
+        "Drain plug gasket"
+      ],
+      "steps": [
+        "Warm the engine 2 minutes, then shut it off and park on level ground.",
+        "Raise the vehicle safely on ramps or jack stands.",
+        "Remove the drain plug and let the oil drain into the pan.",
+        "Remove the old filter (spin-on filter at the front of the engine, passenger side), oil the new gasket and fit it hand-tight.",
+        "Refit the drain plug with a new gasket and torque to spec.",
+        "Fill with 8 qt of 0W-20 dexos1 Gen 2, run 30 s, check for leaks, recheck the dipstick.",
+        "Reset the oil-life monitor in the instrument cluster menu."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Chevrolet",
+      "source": "assumption: drafted from the 2020 Chevrolet Silverado 1500 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2020-chevrolet-silverado-1500-5.3-4wd",
+      "job_key": "engine_air_filter",
+      "kind": "maintenance",
+      "title": "Replace engine air filter",
+      "difficulty": "easy",
+      "time_min": 10,
+      "tools": [
+        "Screwdriver (some clips)"
+      ],
+      "parts": [
+        "Engine air filter"
+      ],
+      "steps": [
+        "Open the hood and find the air box next to the engine.",
+        "Release the clips on the air box lid.",
+        "Lift out the old filter and wipe debris from the box.",
+        "Seat the new filter with the rubber edge all the way round.",
+        "Close the lid and lock every clip."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Chevrolet",
+      "source": "assumption: drafted from the 2020 Chevrolet Silverado 1500 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2020-chevrolet-silverado-1500-5.3-4wd",
+      "job_key": "cabin_air_filter",
+      "kind": "maintenance",
+      "title": "Replace cabin air filter",
+      "difficulty": "easy",
+      "time_min": 15,
+      "tools": [
+        "None"
+      ],
+      "parts": [
+        "Cabin air filter"
+      ],
+      "steps": [
+        "Open the glove box, push in its sides, and lower it to reach the filter door.",
+        "Slide out the old filter and note the airflow arrow.",
+        "Insert the new filter with the arrow pointing the same way.",
+        "Refit the cover or glove box."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Chevrolet",
+      "source": "assumption: drafted from the 2020 Chevrolet Silverado 1500 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2020-chevrolet-silverado-1500-5.3-4wd",
+      "job_key": "tire_rotation",
+      "kind": "maintenance",
+      "title": "Rotate tires",
+      "difficulty": "medium",
+      "time_min": 45,
+      "tools": [
+        "Floor jack",
+        "Jack stands",
+        "Lug wrench",
+        "Torque wrench",
+        "Tire gauge"
+      ],
+      "parts": [],
+      "steps": [
+        "Loosen the lug nuts a half turn on all four wheels.",
+        "Raise the vehicle and support it on jack stands.",
+        "Move the wheels front-to-rear on the same side (rearward cross for 4WD trucks).",
+        "Hand-tighten, lower, then torque the lug nuts in a star pattern.",
+        "Set all tires to 35 psi cold, per the door-jamb placard."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Chevrolet",
+      "source": "assumption: drafted from the 2020 Chevrolet Silverado 1500 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2020-chevrolet-silverado-1500-5.3-4wd",
+      "job_key": "wiper_blades",
+      "kind": "maintenance",
+      "title": "Replace wiper blades",
+      "difficulty": "easy",
+      "time_min": 10,
+      "tools": [
+        "None"
+      ],
+      "parts": [
+        "22 in + 22 in blades"
+      ],
+      "steps": [
+        "Lift the wiper arm off the windshield.",
+        "Press the release tab and slide the old blade off the hook.",
+        "Slide the new blade on until it clicks.",
+        "Lower the arm gently and test the wipers."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Chevrolet",
+      "source": "assumption: drafted from the 2020 Chevrolet Silverado 1500 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2020-chevrolet-silverado-1500-5.3-4wd",
+      "job_key": "battery",
+      "kind": "repair",
+      "title": "Test and replace the 12V battery",
+      "difficulty": "medium",
+      "time_min": 30,
+      "tools": [
+        "Multimeter",
+        "10 mm wrench",
+        "Battery terminal brush"
+      ],
+      "parts": [
+        "12V battery (same group size)"
+      ],
+      "steps": [
+        "With the engine off for an hour, measure the battery: 12.6 V is full, below 12.2 V is weak.",
+        "Disconnect the negative terminal first, then the positive.",
+        "Remove the hold-down and lift the battery out.",
+        "Clean the terminals, fit the new battery and the hold-down.",
+        "Connect positive first, then negative. Most parts stores recycle the old battery."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Chevrolet",
+      "source": "assumption: drafted from the 2020 Chevrolet Silverado 1500 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2020-chevrolet-silverado-1500-5.3-4wd",
+      "job_key": "brake_pads_front",
+      "kind": "repair",
+      "title": "Replace front brake pads",
+      "difficulty": "hard",
+      "time_min": 90,
+      "tools": [
+        "Floor jack",
+        "Jack stands",
+        "Socket set",
+        "C-clamp or piston tool",
+        "Torque wrench"
+      ],
+      "parts": [
+        "Front brake pads",
+        "Brake cleaner",
+        "Caliper grease"
+      ],
+      "steps": [
+        "Raise the front and remove the wheels.",
+        "Remove the caliper bolts and hang the caliper; never let it hang by the hose.",
+        "Remove the old pads, check rotor thickness against the minimum stamped on it.",
+        "Push the piston back, fit the new pads with grease on the contact points.",
+        "Refit the caliper and torque the bolts, refit the wheels.",
+        "Pump the brake pedal until firm before driving, then bed in the pads with gentle stops."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Chevrolet",
+      "source": "assumption: drafted from the 2020 Chevrolet Silverado 1500 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2020-chevrolet-silverado-1500-5.3-4wd",
+      "job_key": null,
+      "kind": "repair",
+      "title": "Spot Dynamic Fuel Management lifter trouble",
+      "difficulty": "shop_only",
+      "time_min": 20,
+      "tools": [
+        "OBD-II scanner"
+      ],
+      "parts": [],
+      "steps": [
+        "Listen at idle for a steady ticking from the top of the engine that rises with RPM.",
+        "Note any misfire, check-engine light, or rough idle at low speed.",
+        "Scan for codes P0300 to P0308 (misfires) and P3400-range cylinder deactivation codes.",
+        "Do not keep driving with a flashing check-engine light.",
+        "This repair (lifters, sometimes camshaft) is shop-only; ask whether the 5 yr / 60k powertrain warranty covers it."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Chevrolet",
+      "source": "assumption: drafted from the 2020 Chevrolet Silverado 1500 owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2021-toyota-rav4-hybrid-awd",
+      "job_key": "oil_change",
+      "kind": "maintenance",
+      "title": "Change engine oil and filter",
+      "difficulty": "medium",
+      "time_min": 45,
+      "tools": [
+        "Socket set",
+        "Oil filter wrench",
+        "Drain pan",
+        "Funnel",
+        "Jack stands or ramps"
+      ],
+      "parts": [
+        "4.8 qt 0W-16",
+        "Oil filter",
+        "Drain plug gasket"
+      ],
+      "steps": [
+        "Warm the engine 2 minutes, then shut it off and park on level ground.",
+        "Raise the vehicle safely on ramps or jack stands.",
+        "Remove the drain plug and let the oil drain into the pan.",
+        "Remove the old filter (spin-on filter at the front of the engine, reached from below), oil the new gasket and fit it hand-tight.",
+        "Refit the drain plug with a new gasket and torque to spec.",
+        "Fill with 4.8 qt of 0W-16, run 30 s, check for leaks, recheck the dipstick.",
+        "Reset the oil-life monitor in the instrument cluster menu."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Toyota/RAV4/2021",
+      "source": "assumption: drafted from the 2021 Toyota RAV4 Hybrid owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2021-toyota-rav4-hybrid-awd",
+      "job_key": "engine_air_filter",
+      "kind": "maintenance",
+      "title": "Replace engine air filter",
+      "difficulty": "easy",
+      "time_min": 10,
+      "tools": [
+        "Screwdriver (some clips)"
+      ],
+      "parts": [
+        "Engine air filter"
+      ],
+      "steps": [
+        "Open the hood and find the air box next to the engine.",
+        "Release the clips on the air box lid.",
+        "Lift out the old filter and wipe debris from the box.",
+        "Seat the new filter with the rubber edge all the way round.",
+        "Close the lid and lock every clip."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Toyota/RAV4/2021",
+      "source": "assumption: drafted from the 2021 Toyota RAV4 Hybrid owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2021-toyota-rav4-hybrid-awd",
+      "job_key": "cabin_air_filter",
+      "kind": "maintenance",
+      "title": "Replace cabin air filter",
+      "difficulty": "easy",
+      "time_min": 15,
+      "tools": [
+        "None"
+      ],
+      "parts": [
+        "Cabin air filter"
+      ],
+      "steps": [
+        "Open the glove box, unhook the damper, squeeze the sides to lower it, and open the filter cover.",
+        "Slide out the old filter and note the airflow arrow.",
+        "Insert the new filter with the arrow pointing the same way.",
+        "Refit the cover or glove box."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Toyota/RAV4/2021",
+      "source": "assumption: drafted from the 2021 Toyota RAV4 Hybrid owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2021-toyota-rav4-hybrid-awd",
+      "job_key": "tire_rotation",
+      "kind": "maintenance",
+      "title": "Rotate tires",
+      "difficulty": "medium",
+      "time_min": 45,
+      "tools": [
+        "Floor jack",
+        "Jack stands",
+        "Lug wrench",
+        "Torque wrench",
+        "Tire gauge"
+      ],
+      "parts": [],
+      "steps": [
+        "Loosen the lug nuts a half turn on all four wheels.",
+        "Raise the vehicle and support it on jack stands.",
+        "Move the wheels front-to-rear on the same side (rearward cross for AWD).",
+        "Hand-tighten, lower, then torque the lug nuts in a star pattern.",
+        "Set all tires to 35 psi cold, per the door-jamb placard."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Toyota/RAV4/2021",
+      "source": "assumption: drafted from the 2021 Toyota RAV4 Hybrid owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2021-toyota-rav4-hybrid-awd",
+      "job_key": "wiper_blades",
+      "kind": "maintenance",
+      "title": "Replace wiper blades",
+      "difficulty": "easy",
+      "time_min": 10,
+      "tools": [
+        "None"
+      ],
+      "parts": [
+        "26 in + 16 in blades"
+      ],
+      "steps": [
+        "Lift the wiper arm off the windshield.",
+        "Press the release tab and slide the old blade off the hook.",
+        "Slide the new blade on until it clicks.",
+        "Lower the arm gently and test the wipers."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Toyota/RAV4/2021",
+      "source": "assumption: drafted from the 2021 Toyota RAV4 Hybrid owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2021-toyota-rav4-hybrid-awd",
+      "job_key": "battery",
+      "kind": "repair",
+      "title": "Test and replace the 12V battery",
+      "difficulty": "medium",
+      "time_min": 30,
+      "tools": [
+        "Multimeter",
+        "10 mm wrench",
+        "Battery terminal brush"
+      ],
+      "parts": [
+        "12V battery (same group size)"
+      ],
+      "steps": [
+        "With the engine off for an hour, measure the battery: 12.6 V is full, below 12.2 V is weak.",
+        "Disconnect the negative terminal first, then the positive.",
+        "Remove the hold-down and lift the battery out.",
+        "Clean the terminals, fit the new battery and the hold-down.",
+        "Connect positive first, then negative. Most parts stores recycle the old battery."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Toyota/RAV4/2021",
+      "source": "assumption: drafted from the 2021 Toyota RAV4 Hybrid owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2021-toyota-rav4-hybrid-awd",
+      "job_key": "brake_pads_front",
+      "kind": "repair",
+      "title": "Replace front brake pads",
+      "difficulty": "hard",
+      "time_min": 90,
+      "tools": [
+        "Floor jack",
+        "Jack stands",
+        "Socket set",
+        "C-clamp or piston tool",
+        "Torque wrench"
+      ],
+      "parts": [
+        "Front brake pads",
+        "Brake cleaner",
+        "Caliper grease"
+      ],
+      "steps": [
+        "Raise the front and remove the wheels.",
+        "Remove the caliper bolts and hang the caliper; never let it hang by the hose.",
+        "Remove the old pads, check rotor thickness against the minimum stamped on it.",
+        "Push the piston back, fit the new pads with grease on the contact points.",
+        "Refit the caliper and torque the bolts, refit the wheels.",
+        "Pump the brake pedal until firm before driving, then bed in the pads with gentle stops."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Toyota/RAV4/2021",
+      "source": "assumption: drafted from the 2021 Toyota RAV4 Hybrid owner manual and maintenance schedule; needs a person's check"
+    },
+    {
+      "model_id": "2021-toyota-rav4-hybrid-awd",
+      "job_key": null,
+      "kind": "repair",
+      "title": "Fix a dead 12V battery on the RAV4 Hybrid",
+      "difficulty": "medium",
+      "time_min": 30,
+      "tools": [
+        "Multimeter",
+        "Jump pack",
+        "10 mm wrench"
+      ],
+      "parts": [
+        "12V AGM battery if replacing"
+      ],
+      "steps": [
+        "A dead 12V battery means the car will not show READY; the hybrid battery is usually fine.",
+        "Open the hood and jump from the 12V battery terminals as the owner manual shows.",
+        "Once READY, leave it on for 30 minutes; the hybrid system charges the 12V battery.",
+        "If it dies again within days, test it: below 12.4 V after a night parked means replace with an AGM battery.",
+        "Avoid leaving accessories or a dashcam on while the car is off."
+      ],
+      "video_url": "https://www.carcarekiosk.com/videos/Toyota/RAV4/2021",
+      "source": "assumption: drafted from the 2021 Toyota RAV4 Hybrid owner manual and maintenance schedule; needs a person's check"
+    }
+  ],
+  "model_common_issues": [
+    {
+      "model_id": "2019-ford-f-150-2.7-4wd",
+      "title": "Oil pan leak (composite pan)",
+      "symptom": "Oil spots under the engine, low oil between changes",
+      "typical_cost_low_cents": 40000,
+      "typical_cost_high_cents": 90000,
+      "source": "https://www.nhtsa.gov/vehicle/2019/FORD/F-150 (owner complaints); cost range is an assumption"
+    },
+    {
+      "model_id": "2019-ford-f-150-2.7-4wd",
+      "title": "10-speed transmission harsh or erratic shifts",
+      "symptom": "Clunk or hard shift between low gears",
+      "typical_cost_low_cents": 15000,
+      "typical_cost_high_cents": 400000,
+      "source": "https://www.nhtsa.gov/vehicle/2019/FORD/F-150 (owner complaints); cost range is an assumption"
+    },
+    {
+      "model_id": "2019-ford-f-150-2.7-4wd",
+      "title": "Oil consumption / PCV",
+      "symptom": "Low oil warning, blue smoke at start-up",
+      "typical_cost_low_cents": 10000,
+      "typical_cost_high_cents": 150000,
+      "source": "https://www.nhtsa.gov/vehicle/2019/FORD/F-150 (owner complaints); cost range is an assumption"
+    },
+    {
+      "model_id": "2020-chevrolet-silverado-1500-5.3-4wd",
+      "title": "Lifter failure on cylinder deactivation (AFM/DFM)",
+      "symptom": "Ticking at idle, misfire, check-engine light",
+      "typical_cost_low_cents": 250000,
+      "typical_cost_high_cents": 600000,
+      "source": "https://www.nhtsa.gov/vehicle/2020/CHEVROLET/SILVERADO%201500 (owner complaints); cost range is an assumption"
+    },
+    {
+      "model_id": "2020-chevrolet-silverado-1500-5.3-4wd",
+      "title": "Transmission shudder",
+      "symptom": "Shake at 25 to 50 mph under light throttle",
+      "typical_cost_low_cents": 30000,
+      "typical_cost_high_cents": 350000,
+      "source": "https://www.nhtsa.gov/vehicle/2020/CHEVROLET/SILVERADO%201500 (owner complaints); cost range is an assumption"
+    },
+    {
+      "model_id": "2020-chevrolet-silverado-1500-5.3-4wd",
+      "title": "A/C condenser leak",
+      "symptom": "A/C blows warm after a few months",
+      "typical_cost_low_cents": 80000,
+      "typical_cost_high_cents": 150000,
+      "source": "https://www.nhtsa.gov/vehicle/2020/CHEVROLET/SILVERADO%201500 (owner complaints); cost range is an assumption"
+    },
+    {
+      "model_id": "2021-toyota-rav4-hybrid-awd",
+      "title": "12V battery drain",
+      "symptom": "Car will not show READY after sitting a few days",
+      "typical_cost_low_cents": 15000,
+      "typical_cost_high_cents": 35000,
+      "source": "https://www.nhtsa.gov/vehicle/2021/TOYOTA/RAV4%20HYBRID (owner complaints); cost range is an assumption"
+    },
+    {
+      "model_id": "2021-toyota-rav4-hybrid-awd",
+      "title": "Fuel tank will not fill completely",
+      "symptom": "Pump clicks off early, range lower than expected",
+      "typical_cost_low_cents": 0,
+      "typical_cost_high_cents": 150000,
+      "source": "https://www.nhtsa.gov/vehicle/2021/TOYOTA/RAV4%20HYBRID (owner complaints); cost range is an assumption"
+    },
+    {
+      "model_id": "2021-toyota-rav4-hybrid-awd",
+      "title": "Hybrid inverter coolant pump",
+      "symptom": "Hybrid system warning light",
+      "typical_cost_low_cents": 50000,
+      "typical_cost_high_cents": 120000,
+      "source": "https://www.nhtsa.gov/vehicle/2021/TOYOTA/RAV4%20HYBRID (owner complaints); cost range is an assumption"
+    }
+  ]
+}
