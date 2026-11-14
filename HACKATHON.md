@@ -1,5 +1,7 @@
 # The brief
 
+Organizers' FAQ answers (paywall, demo mode, deck limits, deadlines): `docs/faq-rules.md`.
+
 **Build a web product that closes a fundamental pain for adults in the US, one they will pay for.**
 
 | Audience | Model | Platform | Time |
