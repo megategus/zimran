@@ -1,0 +1,288 @@
+[
+  {
+    "job_key": "oil_change",
+    "label": "Oil and filter change",
+    "aliases": [
+      "oil change",
+      "lube oil filter",
+      "synthetic oil change",
+      "lof"
+    ],
+    "hours_low": 0.3,
+    "hours_high": 0.5,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  },
+  {
+    "job_key": "tire_rotation",
+    "label": "Tire rotation",
+    "aliases": [
+      "rotate tires",
+      "tire rotate"
+    ],
+    "hours_low": 0.3,
+    "hours_high": 0.5,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  },
+  {
+    "job_key": "brake_pads_front",
+    "label": "Front brake pads",
+    "aliases": [
+      "front brakes",
+      "front pads",
+      "front brake pad replacement"
+    ],
+    "hours_low": 1,
+    "hours_high": 1.5,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  },
+  {
+    "job_key": "brake_pads_rear",
+    "label": "Rear brake pads",
+    "aliases": [
+      "rear brakes",
+      "rear pads",
+      "rear brake pad replacement"
+    ],
+    "hours_low": 1,
+    "hours_high": 1.5,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  },
+  {
+    "job_key": "rotors_front",
+    "label": "Front brake rotors (with pad job)",
+    "aliases": [
+      "front rotors",
+      "resurface rotors",
+      "replace front rotors"
+    ],
+    "hours_low": 0.5,
+    "hours_high": 1,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  },
+  {
+    "job_key": "battery",
+    "label": "Battery replacement",
+    "aliases": [
+      "battery",
+      "replace battery",
+      "12v battery"
+    ],
+    "hours_low": 0.3,
+    "hours_high": 0.6,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  },
+  {
+    "job_key": "engine_air_filter",
+    "label": "Engine air filter",
+    "aliases": [
+      "air filter",
+      "engine filter"
+    ],
+    "hours_low": 0.1,
+    "hours_high": 0.3,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  },
+  {
+    "job_key": "cabin_air_filter",
+    "label": "Cabin air filter",
+    "aliases": [
+      "cabin filter",
+      "pollen filter",
+      "a/c filter"
+    ],
+    "hours_low": 0.2,
+    "hours_high": 0.5,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  },
+  {
+    "job_key": "coolant_flush",
+    "label": "Coolant flush",
+    "aliases": [
+      "coolant exchange",
+      "radiator flush",
+      "cooling system service",
+      "antifreeze flush"
+    ],
+    "hours_low": 0.8,
+    "hours_high": 1.5,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  },
+  {
+    "job_key": "transmission_fluid",
+    "label": "Transmission fluid service",
+    "aliases": [
+      "transmission flush",
+      "trans fluid exchange",
+      "cvt fluid",
+      "atf service"
+    ],
+    "hours_low": 0.8,
+    "hours_high": 1.5,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  },
+  {
+    "job_key": "spark_plugs",
+    "label": "Spark plugs",
+    "aliases": [
+      "tune up",
+      "replace spark plugs",
+      "tune-up"
+    ],
+    "hours_low": 1,
+    "hours_high": 2.5,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  },
+  {
+    "job_key": "brake_fluid",
+    "label": "Brake fluid flush",
+    "aliases": [
+      "brake flush",
+      "brake fluid exchange",
+      "brake bleed"
+    ],
+    "hours_low": 0.8,
+    "hours_high": 1,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  },
+  {
+    "job_key": "wiper_blades",
+    "label": "Wiper blades",
+    "aliases": [
+      "wipers",
+      "wiper blade replacement"
+    ],
+    "hours_low": 0.1,
+    "hours_high": 0.2,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  },
+  {
+    "job_key": "alignment",
+    "label": "Wheel alignment",
+    "aliases": [
+      "4 wheel alignment",
+      "four wheel alignment",
+      "front end alignment"
+    ],
+    "hours_low": 0.8,
+    "hours_high": 1.2,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  },
+  {
+    "job_key": "serpentine_belt",
+    "label": "Serpentine belt",
+    "aliases": [
+      "drive belt",
+      "accessory belt",
+      "fan belt"
+    ],
+    "hours_low": 0.5,
+    "hours_high": 1.2,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  },
+  {
+    "job_key": "fuel_injector_cleaning",
+    "label": "Fuel injector cleaning",
+    "aliases": [
+      "fuel system cleaning",
+      "induction service",
+      "fuel injection service",
+      "fuel system service"
+    ],
+    "hours_low": 0.5,
+    "hours_high": 1,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  },
+  {
+    "job_key": "throttle_body_cleaning",
+    "label": "Throttle body cleaning",
+    "aliases": [
+      "throttle body service",
+      "clean throttle body"
+    ],
+    "hours_low": 0.3,
+    "hours_high": 0.7,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  },
+  {
+    "job_key": "water_pump",
+    "label": "Water pump replacement",
+    "aliases": [
+      "water pump",
+      "replace water pump",
+      "coolant pump"
+    ],
+    "hours_low": 2,
+    "hours_high": 4,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  },
+  {
+    "job_key": "catalytic_converter",
+    "label": "Catalytic converter replacement",
+    "aliases": [
+      "catalytic converter",
+      "cat converter",
+      "replace converter"
+    ],
+    "hours_low": 1,
+    "hours_high": 2.5,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  },
+  {
+    "job_key": "ecu",
+    "label": "Engine control module (ECU/PCM)",
+    "aliases": [
+      "ecm",
+      "pcm",
+      "engine computer",
+      "ecu replacement"
+    ],
+    "hours_low": 0.8,
+    "hours_high": 1.5,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  },
+  {
+    "job_key": "hybrid_inverter_coolant",
+    "label": "Hybrid inverter coolant",
+    "aliases": [
+      "inverter coolant",
+      "hybrid coolant"
+    ],
+    "hours_low": 0.8,
+    "hours_high": 1.2,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  },
+  {
+    "job_key": "hybrid_battery",
+    "label": "Hybrid battery replacement",
+    "aliases": [
+      "hybrid battery",
+      "high voltage battery",
+      "hv battery"
+    ],
+    "hours_low": 2,
+    "hours_high": 4,
+    "source": "assumption: typical flat-rate labor time range, not from a licensed labor guide",
+    "as_of": "2026-11-14"
+  }
+]

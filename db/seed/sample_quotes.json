@@ -1,0 +1,23 @@
+[
+  {
+    "id": "a",
+    "label": "Sample: 2019 Honda Civic, 34,800 mi, coolant and fuel system upsell",
+    "source": "assumption: sample quote written for the demo, not from a real shop",
+    "as_of": "2026-11-14",
+    "text": "Lone Star Auto Care - Repair Estimate\nVehicle: 2019 Honda Civic LX  Mileage: 34,812\nCustomer concern: 35k service\n1. Synthetic oil and filter change ............ $89.95\n2. Tire rotation ............................. $29.95\n3. Cabin air filter replacement .............. $79.00\n4. Coolant flush - cooling system service .... $189.00\n5. Fuel injection service / induction clean .. $179.00\nShop supplies ................................ $24.50\nEstimate total: $591.40"
+  },
+  {
+    "id": "b",
+    "label": "Sample: 2018 Hyundai Elantra, 52,300 mi, water pump inside powertrain warranty",
+    "source": "assumption: sample quote written for the demo, not from a real shop",
+    "as_of": "2026-11-14",
+    "text": "South Congress Auto - Estimate\n2018 Hyundai Elantra SEL 2.0L  Odometer: 52,310  Original owner\nComplaint: coolant leak at front of engine, sweet smell\n1. Replace water pump (parts $289.00, labor 2.5 hr) .. $612.00\n2. Coolant flush and refill ......................... $149.00\nShop supplies / disposal ............................ $25.00\nTotal: $786.00"
+  },
+  {
+    "id": "c",
+    "label": "Sample: 2020 Toyota Camry, 41,200 mi, fair front brake job",
+    "source": "assumption: sample quote written for the demo, not from a real shop",
+    "as_of": "2026-11-14",
+    "text": "Manchaca Road Garage - Quote\n2020 Toyota Camry LE  Miles: 41,230\n1. Front brake pads, ceramic ......... $229.00\n2. Front rotors, replace pair ........ $189.00\n3. Tire rotation ..................... $25.00\nTotal: $443.00"
+  }
+]

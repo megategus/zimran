@@ -1,0 +1,666 @@
+[
+  {
+    "make": "generic",
+    "job_key": "oil_change",
+    "interval_miles": 5000,
+    "interval_months": 6,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: common industry interval for cars without a maker row",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "generic",
+    "job_key": "tire_rotation",
+    "interval_miles": 5000,
+    "interval_months": 6,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: common industry interval for cars without a maker row",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "generic",
+    "job_key": "engine_air_filter",
+    "interval_miles": 30000,
+    "interval_months": 36,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: common industry interval for cars without a maker row",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "generic",
+    "job_key": "cabin_air_filter",
+    "interval_miles": 15000,
+    "interval_months": 12,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: common industry interval for cars without a maker row",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "generic",
+    "job_key": "coolant_flush",
+    "interval_miles": 60000,
+    "interval_months": 60,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: common industry interval for cars without a maker row",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "generic",
+    "job_key": "transmission_fluid",
+    "interval_miles": 60000,
+    "interval_months": 60,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: common industry interval for cars without a maker row",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "generic",
+    "job_key": "spark_plugs",
+    "interval_miles": 100000,
+    "interval_months": null,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: common industry interval for cars without a maker row",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "generic",
+    "job_key": "brake_fluid",
+    "interval_miles": 30000,
+    "interval_months": 36,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: common industry interval for cars without a maker row",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "generic",
+    "job_key": "wiper_blades",
+    "interval_miles": null,
+    "interval_months": 12,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: common industry interval for cars without a maker row",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "generic",
+    "job_key": "serpentine_belt",
+    "interval_miles": 90000,
+    "interval_months": null,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: common industry interval for cars without a maker row",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "generic",
+    "job_key": "fuel_injector_cleaning",
+    "interval_miles": 100000,
+    "interval_months": null,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: common industry interval for cars without a maker row",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "generic",
+    "job_key": "throttle_body_cleaning",
+    "interval_miles": 100000,
+    "interval_months": null,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: common industry interval for cars without a maker row",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Toyota",
+    "job_key": "oil_change",
+    "interval_miles": 10000,
+    "interval_months": 12,
+    "severe_interval_miles": 5000,
+    "applies_to": null,
+    "source": "assumption: summarized from the Toyota scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Toyota",
+    "job_key": "tire_rotation",
+    "interval_miles": 5000,
+    "interval_months": 6,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Toyota scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Toyota",
+    "job_key": "engine_air_filter",
+    "interval_miles": 30000,
+    "interval_months": 36,
+    "severe_interval_miles": 15000,
+    "applies_to": null,
+    "source": "assumption: summarized from the Toyota scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Toyota",
+    "job_key": "cabin_air_filter",
+    "interval_miles": 30000,
+    "interval_months": 36,
+    "severe_interval_miles": 15000,
+    "applies_to": null,
+    "source": "assumption: summarized from the Toyota scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Toyota",
+    "job_key": "coolant_flush",
+    "interval_miles": 100000,
+    "interval_months": 120,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Toyota scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Toyota",
+    "job_key": "spark_plugs",
+    "interval_miles": 120000,
+    "interval_months": null,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Toyota scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Toyota",
+    "job_key": "transmission_fluid",
+    "interval_miles": null,
+    "interval_months": null,
+    "severe_interval_miles": 60000,
+    "applies_to": null,
+    "source": "assumption: summarized from the Toyota scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Toyota",
+    "job_key": "hybrid_inverter_coolant",
+    "interval_miles": 150000,
+    "interval_months": null,
+    "severe_interval_miles": null,
+    "applies_to": {
+      "fuel": [
+        "hybrid"
+      ]
+    },
+    "source": "assumption: summarized from the Toyota scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Honda",
+    "job_key": "oil_change",
+    "interval_miles": 7500,
+    "interval_months": 12,
+    "severe_interval_miles": 5000,
+    "applies_to": null,
+    "source": "assumption: summarized from the Honda scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Honda",
+    "job_key": "tire_rotation",
+    "interval_miles": 7500,
+    "interval_months": 12,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Honda scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Honda",
+    "job_key": "engine_air_filter",
+    "interval_miles": 30000,
+    "interval_months": 36,
+    "severe_interval_miles": 15000,
+    "applies_to": null,
+    "source": "assumption: summarized from the Honda scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Honda",
+    "job_key": "cabin_air_filter",
+    "interval_miles": 30000,
+    "interval_months": 24,
+    "severe_interval_miles": 15000,
+    "applies_to": null,
+    "source": "assumption: summarized from the Honda scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Honda",
+    "job_key": "coolant_flush",
+    "interval_miles": 120000,
+    "interval_months": 120,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Honda scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Honda",
+    "job_key": "spark_plugs",
+    "interval_miles": 100000,
+    "interval_months": null,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Honda scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Honda",
+    "job_key": "brake_fluid",
+    "interval_miles": null,
+    "interval_months": 36,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Honda scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Ford",
+    "job_key": "oil_change",
+    "interval_miles": 10000,
+    "interval_months": 12,
+    "severe_interval_miles": 5000,
+    "applies_to": null,
+    "source": "assumption: summarized from the Ford scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Ford",
+    "job_key": "tire_rotation",
+    "interval_miles": 10000,
+    "interval_months": 12,
+    "severe_interval_miles": 5000,
+    "applies_to": null,
+    "source": "assumption: summarized from the Ford scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Ford",
+    "job_key": "engine_air_filter",
+    "interval_miles": 30000,
+    "interval_months": null,
+    "severe_interval_miles": 15000,
+    "applies_to": null,
+    "source": "assumption: summarized from the Ford scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Ford",
+    "job_key": "cabin_air_filter",
+    "interval_miles": 20000,
+    "interval_months": null,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Ford scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Ford",
+    "job_key": "coolant_flush",
+    "interval_miles": 100000,
+    "interval_months": 120,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Ford scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Ford",
+    "job_key": "spark_plugs",
+    "interval_miles": 100000,
+    "interval_months": null,
+    "severe_interval_miles": 60000,
+    "applies_to": null,
+    "source": "assumption: summarized from the Ford scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Chevrolet",
+    "job_key": "oil_change",
+    "interval_miles": 7500,
+    "interval_months": 12,
+    "severe_interval_miles": 5000,
+    "applies_to": null,
+    "source": "assumption: summarized from the Chevrolet scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Chevrolet",
+    "job_key": "tire_rotation",
+    "interval_miles": 7500,
+    "interval_months": 12,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Chevrolet scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Chevrolet",
+    "job_key": "engine_air_filter",
+    "interval_miles": 45000,
+    "interval_months": 48,
+    "severe_interval_miles": 22500,
+    "applies_to": null,
+    "source": "assumption: summarized from the Chevrolet scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Chevrolet",
+    "job_key": "cabin_air_filter",
+    "interval_miles": 22500,
+    "interval_months": 24,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Chevrolet scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Chevrolet",
+    "job_key": "coolant_flush",
+    "interval_miles": 150000,
+    "interval_months": 60,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Chevrolet scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Chevrolet",
+    "job_key": "spark_plugs",
+    "interval_miles": 97500,
+    "interval_months": null,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Chevrolet scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Chevrolet",
+    "job_key": "transmission_fluid",
+    "interval_miles": 97500,
+    "interval_months": null,
+    "severe_interval_miles": 45000,
+    "applies_to": null,
+    "source": "assumption: summarized from the Chevrolet scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Hyundai",
+    "job_key": "oil_change",
+    "interval_miles": 7500,
+    "interval_months": 12,
+    "severe_interval_miles": 3750,
+    "applies_to": null,
+    "source": "assumption: summarized from the Hyundai scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Hyundai",
+    "job_key": "tire_rotation",
+    "interval_miles": 7500,
+    "interval_months": 12,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Hyundai scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Hyundai",
+    "job_key": "engine_air_filter",
+    "interval_miles": 30000,
+    "interval_months": null,
+    "severe_interval_miles": 15000,
+    "applies_to": null,
+    "source": "assumption: summarized from the Hyundai scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Hyundai",
+    "job_key": "cabin_air_filter",
+    "interval_miles": 15000,
+    "interval_months": 12,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Hyundai scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Hyundai",
+    "job_key": "coolant_flush",
+    "interval_miles": 120000,
+    "interval_months": 120,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Hyundai scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Hyundai",
+    "job_key": "spark_plugs",
+    "interval_miles": 105000,
+    "interval_months": null,
+    "severe_interval_miles": 45000,
+    "applies_to": null,
+    "source": "assumption: summarized from the Hyundai scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Kia",
+    "job_key": "oil_change",
+    "interval_miles": 7500,
+    "interval_months": 12,
+    "severe_interval_miles": 3750,
+    "applies_to": null,
+    "source": "assumption: summarized from the Kia scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Kia",
+    "job_key": "tire_rotation",
+    "interval_miles": 7500,
+    "interval_months": 12,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Kia scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Kia",
+    "job_key": "engine_air_filter",
+    "interval_miles": 30000,
+    "interval_months": null,
+    "severe_interval_miles": 15000,
+    "applies_to": null,
+    "source": "assumption: summarized from the Kia scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Kia",
+    "job_key": "cabin_air_filter",
+    "interval_miles": 15000,
+    "interval_months": 12,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Kia scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Kia",
+    "job_key": "coolant_flush",
+    "interval_miles": 120000,
+    "interval_months": 120,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Kia scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Kia",
+    "job_key": "spark_plugs",
+    "interval_miles": 105000,
+    "interval_months": null,
+    "severe_interval_miles": 45000,
+    "applies_to": null,
+    "source": "assumption: summarized from the Kia scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Nissan",
+    "job_key": "oil_change",
+    "interval_miles": 5000,
+    "interval_months": 6,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Nissan scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Nissan",
+    "job_key": "tire_rotation",
+    "interval_miles": 5000,
+    "interval_months": 6,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Nissan scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Nissan",
+    "job_key": "engine_air_filter",
+    "interval_miles": 30000,
+    "interval_months": null,
+    "severe_interval_miles": 15000,
+    "applies_to": null,
+    "source": "assumption: summarized from the Nissan scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Nissan",
+    "job_key": "cabin_air_filter",
+    "interval_miles": 15000,
+    "interval_months": 12,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Nissan scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Nissan",
+    "job_key": "coolant_flush",
+    "interval_miles": 105000,
+    "interval_months": 120,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Nissan scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Nissan",
+    "job_key": "spark_plugs",
+    "interval_miles": 105000,
+    "interval_months": null,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Nissan scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Nissan",
+    "job_key": "transmission_fluid",
+    "interval_miles": null,
+    "interval_months": null,
+    "severe_interval_miles": 60000,
+    "applies_to": null,
+    "source": "assumption: summarized from the Nissan scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Subaru",
+    "job_key": "oil_change",
+    "interval_miles": 6000,
+    "interval_months": 6,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Subaru scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Subaru",
+    "job_key": "tire_rotation",
+    "interval_miles": 6000,
+    "interval_months": 6,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Subaru scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Subaru",
+    "job_key": "engine_air_filter",
+    "interval_miles": 30000,
+    "interval_months": 36,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Subaru scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Subaru",
+    "job_key": "cabin_air_filter",
+    "interval_miles": 15000,
+    "interval_months": 12,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Subaru scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Subaru",
+    "job_key": "coolant_flush",
+    "interval_miles": 137500,
+    "interval_months": 132,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Subaru scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Subaru",
+    "job_key": "spark_plugs",
+    "interval_miles": 60000,
+    "interval_months": 72,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Subaru scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  },
+  {
+    "make": "Subaru",
+    "job_key": "brake_fluid",
+    "interval_miles": 30000,
+    "interval_months": 30,
+    "severe_interval_miles": null,
+    "applies_to": null,
+    "source": "assumption: summarized from the Subaru scheduled maintenance guide, verify against the owner manual",
+    "as_of": "2026-11-14"
+  }
+]
