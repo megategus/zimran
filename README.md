@@ -1,9 +1,31 @@
-# zimran
+# Counter Check
 
-_Hackathon build: product name and one-line pitch go here._ The brief and judging criteria are in [`HACKATHON.md`](HACKATHON.md).
+Before you pay a car repair quote, find out if you should be paying at all. A US car owner adds their car, checks a shop quote, and sees which lines are overpriced, not in the maker's schedule, covered by warranty or tied to a recall. The brief and judging criteria are in [`HACKATHON.md`](HACKATHON.md).
 
 - **Live:** _production URL_
 - **Pitch deck:** [`pitch/`](pitch/)
+
+## Run locally
+
+Requires Node 20+.
+
+```bash
+npm install
+cp .env.example .env.local   # fill in the values
+npm run dev                  # http://localhost:3000
+npm test                     # Vitest
+npm run build
+```
+
+| Env var | Used for |
+|---|---|
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL |
+| `SUPABASE_SERVICE_ROLE_KEY` | Server-side DB access (never exposed to the browser) |
+| `ANTHROPIC_API_KEY` | Claude reads quote photos and text into structured lines |
+| `STRIPE_SECRET_KEY` | Stripe test-mode checkout |
+| `NEXT_PUBLIC_APP_URL` | Base URL for checkout redirects and share links |
+
+Key dependencies: Next.js 15, React 19, Tailwind CSS 4, Supabase JS, Anthropic SDK, Stripe, zod, qrcode, @react-pdf/renderer, Vitest. Car data comes from the free NHTSA vPIC and Recalls APIs.
 
 ## Team workflow
 
