@@ -1,0 +1,29 @@
+[
+  {
+    "shop_osm_id": "node/13003490472",
+    "job_key": "oil_change",
+    "price_cents": 2999,
+    "includes": "Synthetic blend oil change, plus disposal fee (coupon)",
+    "source_url": "https://www.midas.com/store/tx/austin/2712-w-william-cannon-dr-78745?shopnum=5286",
+    "as_of": "2026-11-14",
+    "is_special": true
+  },
+  {
+    "shop_osm_id": "node/13003490472",
+    "job_key": "oil_change",
+    "price_cents": 3999,
+    "includes": "Full synthetic oil change, plus disposal fee (coupon)",
+    "source_url": "https://www.midas.com/store/tx/austin/2712-w-william-cannon-dr-78745?shopnum=5286",
+    "as_of": "2026-11-14",
+    "is_special": true
+  },
+  {
+    "shop_osm_id": "node/13424863208",
+    "job_key": "oil_change",
+    "price_cents": 6999,
+    "includes": "Full synthetic oil change, up to 5 quarts (offer on the Lamb's site for all stores incl. 3300 S Lamar, expires 2026-11-23)",
+    "source_url": "https://lambstire.com/",
+    "as_of": "2026-11-14",
+    "is_special": true
+  }
+]
