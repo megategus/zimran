@@ -39,10 +39,10 @@ Fill this in at kickoff so every agent knows whose files are whose.
 
 | Area | Owner (login[:agent]) | Folders |
 |---|---|---|
-| Frontend / UX (landing, core flow) | | `app/`, `components/` |
-| Backend / core logic (the real value, no hardcoding) | | `lib/`, `app/api/` |
-| Data, payments, deploy | | `db/`, `infra/`, config files |
-| Pitch deck + demo script + market numbers | | `pitch/` |
+| Frontend / UX (landing, core flow) |igor123456hhh-tech: Claude Code | `app/`, `components/` |
+| Backend / core logic (the real value, no hardcoding) |megategus: Claude code | `lib/`, `app/api/` |
+| Data, payments, deploy |gowtheeer:Claude code | `db/`, `infra/`, config files |
+| Pitch deck + demo script + market numbers |peacefulww: Codex, ChatGPT | `pitch/` |
 
 Shared files (`package.json`, lockfile, root config): only the deploy owner edits them; others ask on the board.
 
