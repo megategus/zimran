@@ -2,7 +2,7 @@
 
 Before you pay a car repair quote, find out if you should be paying at all. A US car owner adds their car, checks a shop quote, and sees which lines are overpriced, not in the maker's schedule, covered by warranty or tied to a recall. The brief and judging criteria are in [`HACKATHON.md`](HACKATHON.md).
 
-- **Live:** _production URL_
+- **Live:** https://zimran-ecru.vercel.app
 - **Pitch deck:** [`pitch/`](pitch/)
 
 ## Run locally
