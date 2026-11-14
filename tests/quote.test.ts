@@ -17,6 +17,10 @@ describe('checkQuote', () => {
     expect(v.flaggedCount).toBe(2);
     expect(v.totalCents).toBe(39800);
   });
+  it('coolant flush with a water pump on the same quote is not an upsell', () => {
+    const v = checkQuote([line('water_pump', 640), line('coolant_flush', 120)], ctx(car({ mileage: 44800 })));
+    expect(v.lines[1].status).not.toBe('upsell');
+  });
   it('"shop supplies $35" → unknown, excluded from overpay', () => {
     const v = checkQuote([line(null, 35)], ctx());
     expect(v.lines[0]).toMatchObject({ status: 'unknown', overpayCents: 0, reason: 'No benchmark for this line.' });
