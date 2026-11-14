@@ -13,9 +13,12 @@ export class NoLinesError extends Error {
 
 export type CheckContext = { car: Car; history: ServiceRecord[]; recalls: Recall[]; today: Date; modelRows?: ScheduleRow[] };
 
+// A repair that drains a system needs the matching fluid job, so that line is never an upsell.
+const NEEDED_WITH: Record<string, string[]> = { coolant_flush: ['water_pump'] };
+
 const usd = (c: number) => `$${Math.round(c / 100).toLocaleString('en-US')}`;
 
-function verdictFor(line: QuoteLine, ctx: CheckContext): LineVerdict {
+function verdictFor(line: QuoteLine, ctx: CheckContext, quoteJobs: Set<string | null>): LineVerdict {
   const { car, history, recalls, today, modelRows } = ctx;
   if (!line.jobKey) return { line, status: 'unknown', overpayCents: 0, reason: 'No benchmark for this line.' };
   const word = (laborFor(line.jobKey)?.label ?? line.jobKey.replace(/_/g, ' ')).toLowerCase();
@@ -37,7 +40,8 @@ function verdictFor(line: QuoteLine, ctx: CheckContext): LineVerdict {
   const range = fairRange(line.jobKey, car.state);
   const ranged = range ? { fairLowCents: range.lowCents, fairHighCents: range.highCents } : {};
 
-  const up = upsellFlag(line.jobKey, car, history, today, modelRows);
+  const neededFor = NEEDED_WITH[line.jobKey]?.find((k) => quoteJobs.has(k));
+  const up = neededFor ? null : upsellFlag(line.jobKey, car, history, today, modelRows);
   if (up?.isUpsell) return {
     line, status: 'upsell', overpayCents: line.totalCents, ...ranged, reason: up.reason,
     sayToShop: `My maker's schedule doesn't call for the ${word} yet. Please take it off the quote.`,
@@ -49,13 +53,15 @@ function verdictFor(line: QuoteLine, ctx: CheckContext): LineVerdict {
     reason: `${usd(line.totalCents)} is above the fair range ${usd(range.lowCents)}–${usd(range.highCents)} (${range.basis}).`,
     sayToShop: `The usual price for the ${word} here is ${usd(range.lowCents)}–${usd(range.highCents)}. Can you match ${usd(range.highCents)}?`,
   };
-  return { line, status: 'fair', overpayCents: 0, ...ranged, reason: `Within the fair range ${usd(range.lowCents)}–${usd(range.highCents)}.` };
+  const need = neededFor ? `Needed with the ${(laborFor(neededFor)?.label ?? neededFor).toLowerCase()} on this quote. ` : '';
+  return { line, status: 'fair', overpayCents: 0, ...ranged, reason: `${need}Within the fair range ${usd(range.lowCents)}–${usd(range.highCents)}.` };
 }
 
 /** Per-line verdicts and total likely overpay. Pure: same input, same verdict. */
 export function checkQuote(lines: QuoteLine[], ctx: CheckContext): QuoteVerdict {
   if (!lines.length) throw new NoLinesError();
-  const verdicts = lines.map((l) => verdictFor(l, ctx));
+  const jobs = new Set(lines.map((l) => l.jobKey));
+  const verdicts = lines.map((l) => verdictFor(l, ctx, jobs));
   return {
     lines: verdicts,
     totalCents: lines.reduce((s, l) => s + l.totalCents, 0),
