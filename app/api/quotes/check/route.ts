@@ -7,6 +7,7 @@ import { getRecalls } from '@/lib/vehicle/recalls';
 import { QuoteParseError, parseQuote } from '@/lib/quote/parse';
 import { NoLinesError, checkQuote } from '@/lib/quote/check';
 import { duePlan } from '@/lib/schedule/plan';
+import { modelRowsFor } from '@/lib/schedule/modelRows';
 import { ensureSampleCar, isSampleId } from '@/lib/demo';
 import { fromRecordRow, type RecordRow } from '@/lib/records/rows';
 import sampleQuotes from '@/db/seed/sample_quotes.json';
@@ -57,19 +58,20 @@ export async function POST(req: NextRequest) {
   if (sampleId && !sample) return NextResponse.json({ error: 'unknown_sample' }, { status: 400 });
   const input = sample ? { text: sample.text } : { text, imageBase64, mediaType };
 
-  const [lines, recalls, records, ent] = await Promise.all([
+  const [lines, recalls, records, ent, modelRows] = await Promise.all([
     // Unreadable input becomes "no lines"; API outages still surface as 500s.
     parseQuote(input).catch((e) => { if (e instanceof QuoteParseError) return []; throw e; }),
     getRecalls(car),
     db().from('service_records').select('*').eq('asset_id', carId).eq('guest_id', guestId),
     db().from('entitlements').select('plan').eq('guest_id', guestId).maybeSingle<{ plan: Plan }>(),
+    modelRowsFor(car),
   ]);
   const history = ((records.data ?? []) as RecordRow[]).map(fromRecordRow);
   const today = new Date();
 
   let verdict: QuoteVerdict;
   try {
-    verdict = checkQuote(lines, { car, history, recalls: 'items' in recalls ? recalls.items : [], today });
+    verdict = checkQuote(lines, { car, history, recalls: 'items' in recalls ? recalls.items : [], today, modelRows });
   } catch (e) {
     if (e instanceof NoLinesError) return NextResponse.json({ error: 'no_lines', message: e.message }, { status: 422 });
     throw e;
@@ -91,7 +93,7 @@ export async function POST(req: NextRequest) {
   return NextResponse.json({
     checkId: saved.id,
     verdict: forPlan(verdict, plan),
-    plan: duePlan(car, history, today),
+    plan: duePlan(car, history, today, modelRows),
     recallsUnavailable: 'error' in recalls,
     userPlan: plan,
   });

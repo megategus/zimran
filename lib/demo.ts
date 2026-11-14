@@ -4,6 +4,8 @@ import type { Car, QuoteLine, ServiceRecord } from './types';
 import { checkQuote } from './quote/check';
 import { remindersFor } from './records/save';
 import { db } from './db';
+import type { ScheduleRow } from './seed';
+import { modelRowsFor } from './schedule/modelRows';
 
 const DAY = 86_400_000;
 const iso = (d: Date) => d.toISOString().slice(0, 10);
@@ -11,7 +13,9 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
 type Rows = Record<'cars' | 'service_records' | 'quote_checks' | 'reminders' | 'documents', Record<string, unknown>[]>;
 
 /** Pure: all rows for one guest, dated relative to `today`. Verdicts and reminders come from the real engines. */
-export function buildDemo(guestId: string, today: Date, newId: () => string = () => crypto.randomUUID()): { carIds: string[]; rows: Rows } {
+export function buildDemo(
+  guestId: string, today: Date, newId: () => string = () => crypto.randomUUID(), modelRows: (car: Car) => ScheduleRow[] = () => [],
+): { carIds: string[]; rows: Rows } {
   const ago = (days: number) => new Date(today.getTime() - days * DAY);
   const cars = new Map<string, Car>();
   for (const { key, ...c } of profile.cars) cars.set(key, { id: newId(), ...(c as Omit<Car, 'id'>) });
@@ -31,14 +35,14 @@ export function buildDemo(guestId: string, today: Date, newId: () => string = ()
     const car = { ...cars.get(q.car)!, mileage: q.mileage };
     const parsed = q.lines as QuoteLine[];
     // shortcut: no NHTSA call while loading the demo (recalls = []), the live check route does query it.
-    const verdict = checkQuote(parsed, { car, history: historyOf(car.id, at), recalls: [], today: at });
+    const verdict = checkQuote(parsed, { car, history: historyOf(car.id, at), recalls: [], today: at, modelRows: modelRows(car) });
     return {
       guest_id: guestId, car_id: car.id, input_kind: 'sample', raw_text: q.text, parsed, verdict,
       overpay_cents: verdict.overpayCents, is_sample: true, created_at: at.toISOString(),
     };
   });
 
-  const reminders = [...cars.values()].flatMap((car) => remindersFor(car, historyOf(car.id), today).map((r) => ({ ...r, guest_id: guestId })));
+  const reminders = [...cars.values()].flatMap((car) => remindersFor(car, historyOf(car.id), today, modelRows(car)).map((r) => ({ ...r, guest_id: guestId })));
 
   return {
     carIds: [...cars.values()].map((c) => c.id),
@@ -68,7 +72,8 @@ export async function loadDemoProfile(guestId: string, today = new Date()): Prom
   if (existing.error) throw new Error(existing.error.message);
   if (existing.data.length) return { carIds: existing.data.map((r: { id: string }) => r.id) };
 
-  const { carIds, rows } = buildDemo(guestId, today);
+  const rowsByCar = new Map(await Promise.all(profile.cars.map(async (c) => [`${c.year} ${c.make} ${c.model}`, await modelRowsFor(c)] as const)));
+  const { carIds, rows } = buildDemo(guestId, today, undefined, (car) => rowsByCar.get(`${car.year} ${car.make} ${car.model}`) ?? []);
   // Parents first: the other tables reference cars(id).
   for (const table of ['cars', 'service_records', 'quote_checks', 'reminders', 'documents'] as const) {
     const { error } = await db().from(table).insert(rows[table]);

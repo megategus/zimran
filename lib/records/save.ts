@@ -1,7 +1,8 @@
 import { z } from 'zod';
 import type { Car, QuoteLine, ServiceRecord } from '../types';
 import { duePlan } from '../schedule/plan';
-import { laborFor } from '../seed';
+import { laborFor, type ScheduleRow } from '../seed';
+import { modelRowsFor } from '../schedule/modelRows';
 import { db } from '../db';
 import { fromRow, type CarRow } from '../vehicle/cars';
 import { fromRecordRow, type RecordRow } from './rows';
@@ -30,15 +31,15 @@ export type RecordInput = z.input<typeof recordInput>;
 type ReminderRow = { car_id: string; service_key: string; due_mileage: number | null; due_date: string | null };
 
 /** Open reminders for a car: everything overdue plus the next two upcoming items of its due plan. */
-export function remindersFor(car: Car, history: ServiceRecord[], today: Date): ReminderRow[] {
-  const plan = duePlan(car, history, today);
+export function remindersFor(car: Car, history: ServiceRecord[], today: Date, modelRows: ScheduleRow[] = []): ReminderRow[] {
+  const plan = duePlan(car, history, today, modelRows);
   return [...plan.filter((d) => d.overdue), ...plan.filter((d) => !d.overdue).slice(0, 2)].map((d) => ({
     car_id: car.id, service_key: d.jobKey, due_mileage: d.dueMiles ?? null, due_date: d.dueDate ?? null,
   }));
 }
 
 /** Pure: validates and builds the new record, the car's new mileage and the regenerated reminders. */
-export function planRecord(car: Car, history: ServiceRecord[], input: Omit<RecordInput, 'quoteCheckId'>, today: Date, id = crypto.randomUUID()) {
+export function planRecord(car: Car, history: ServiceRecord[], input: Omit<RecordInput, 'quoteCheckId'>, today: Date, id = crypto.randomUUID(), modelRows: ScheduleRow[] = []) {
   const latest = Math.max(0, ...history.map((h) => h.mileage));
   if (input.mileage < latest) throw new MileageWentDownError(latest);
   const lines = input.lines ?? [];
@@ -49,7 +50,7 @@ export function planRecord(car: Car, history: ServiceRecord[], input: Omit<Recor
   };
   const carMileage = Math.max(car.mileage, input.mileage);
   const nextHistory = [...history, record];
-  return { record, carMileage, history: nextHistory, reminders: remindersFor({ ...car, mileage: carMileage }, nextHistory, today) };
+  return { record, carMileage, history: nextHistory, reminders: remindersFor({ ...car, mileage: carMileage }, nextHistory, today, modelRows) };
 }
 
 /** Saves a service record for this guest's car, bumps cars.mileage and regenerates its open reminders. */
@@ -70,7 +71,8 @@ export async function saveRecord(guestId: string, raw: RecordInput, today = new 
 
   const { data: rows, error: histErr } = await db().from('service_records').select('*').eq('asset_id', input.carId).eq('guest_id', guestId);
   if (histErr) throw new Error(histErr.message);
-  const plan = planRecord(fromRow(carRow), ((rows ?? []) as RecordRow[]).map(fromRecordRow), { ...input, lines, source }, today);
+  const car = fromRow(carRow);
+  const plan = planRecord(car, ((rows ?? []) as RecordRow[]).map(fromRecordRow), { ...input, lines, source }, today, undefined, await modelRowsFor(car));
   const r = plan.record;
 
   const ins = await db().from('service_records').insert({
