@@ -1,5 +1,10 @@
+"use client";
+
+import { useState } from "react";
 import type { DueService, LineStatus, LineVerdict, QuoteVerdict } from "@/lib/types";
 import { miles, usd } from "./format";
+
+export type Pricing = { monthCents: number; yearCents: number; trialDays: number };
 
 export type CheckResult = {
   checkId: string;
@@ -17,7 +22,7 @@ const STATUS: Record<LineStatus, { label: string; dot: string; chip: string }> =
   unknown: { label: "No benchmark", dot: "bg-muted", chip: "bg-inset text-body" },
 };
 
-export function Verdict({ result, sample }: { result: CheckResult; sample: boolean }) {
+export function Verdict({ result, sample, pricing }: { result: CheckResult; sample: boolean; pricing: Pricing }) {
   const v = result.verdict;
   const stats = [
     { label: "Quote total", value: usd(v.totalCents) },
@@ -46,14 +51,7 @@ export function Verdict({ result, sample }: { result: CheckResult; sample: boole
           <Line key={i} l={l} />
         ))}
       </ul>
-      {v.locked && (
-        <div className="mt-3 rounded-card border border-line bg-inset p-4">
-          <p className="text-sm font-semibold">Counter Check Plus</p>
-          <p className="mt-1 text-sm text-body">
-            Plus shows the fair range on every line and the exact words to say to the shop. $5.99 a month or $39.99 a year.
-          </p>
-        </div>
-      )}
+      {v.locked && <Paywall pricing={pricing} />}
       {result.plan.length > 0 && (
         <div className="mt-6">
           <h3 className="text-sm font-semibold">Coming up for this car</h3>
@@ -101,5 +99,44 @@ function Line({ l }: { l: LineVerdict }) {
         </p>
       )}
     </li>
+  );
+}
+
+function Paywall({ pricing }: { pricing: Pricing }) {
+  const [busy, setBusy] = useState<"month" | "year">();
+  const [error, setError] = useState<string>();
+  const start = async (interval: "month" | "year") => {
+    setBusy(interval); setError(undefined);
+    try {
+      const res = await fetch("/api/checkout", {
+        method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ interval, returnTo: "/" }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.url) throw new Error();
+      window.location.href = data.url;
+    } catch {
+      setError("Checkout could not start. Please try again in a moment.");
+      setBusy(undefined);
+    }
+  };
+  const btn = "h-11 rounded-full px-5 text-sm font-medium transition-colors disabled:opacity-60";
+  return (
+    <div className="mt-3 rounded-card border border-line bg-inset p-4">
+      <p className="text-sm font-semibold">Unlock the full report with Plus</p>
+      <p className="mt-1 text-sm text-body">
+        The fair range on every line and the exact words to say to the shop. Free for {pricing.trialDays} days, then{" "}
+        {usd(pricing.monthCents)} a month or {usd(pricing.yearCents)} a year.
+      </p>
+      <div className="mt-3 flex flex-wrap gap-2">
+        <button type="button" disabled={!!busy} onClick={() => start("year")} className={`${btn} bg-accent text-white hover:bg-accent-deep`}>
+          {busy === "year" ? "Opening checkout…" : `Start trial, ${usd(pricing.yearCents)}/year`}
+        </button>
+        <button type="button" disabled={!!busy} onClick={() => start("month")} className={`${btn} border border-line bg-surface hover:border-muted/50`}>
+          {busy === "month" ? "Opening checkout…" : `Start trial, ${usd(pricing.monthCents)}/month`}
+        </button>
+      </div>
+      <p className="mt-2 text-xs text-muted">Demo checkout in Stripe test mode. Use card 4242 4242 4242 4242 with any future date and CVC. No real charge.</p>
+      {error && <p role="alert" className="mt-2 text-sm text-warn-ink">{error}</p>}
+    </div>
   );
 }

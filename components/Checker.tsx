@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import type { Car } from "@/lib/types";
 import { CarPhoto, photoFor } from "./CarPhoto";
 import { miles } from "./format";
-import { Verdict, type CheckResult } from "./Verdict";
+import { Verdict, type CheckResult, type Pricing } from "./Verdict";
 
 export type Sample = { id: string; year: number; make: string; model: string; mileage: number; note: string };
 type GarageCar = Car & { isSample?: boolean };
@@ -28,7 +28,7 @@ async function api<T>(url: string, init?: RequestInit): Promise<T> {
   return data as T;
 }
 
-export function Checker({ samples }: { samples: Sample[] }) {
+export function Checker({ samples, pricing }: { samples: Sample[]; pricing: Pricing }) {
   const [cars, setCars] = useState<GarageCar[]>([]);
   const [carId, setCarId] = useState<string>();
   const [adding, setAdding] = useState(false);
@@ -37,7 +37,10 @@ export function Checker({ samples }: { samples: Sample[] }) {
   const [busy, setBusy] = useState<string>();
   const [error, setError] = useState<string>();
   const [result, setResult] = useState<{ data: CheckResult; sample: boolean }>();
+  const [checkout, setCheckout] = useState<string | null>(null);
   const resultRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => { setCheckout(new URLSearchParams(window.location.search).get("checkout")); }, []);
 
   useEffect(() => {
     api<GarageCar[]>("/api/cars")
@@ -93,6 +96,12 @@ export function Checker({ samples }: { samples: Sample[] }) {
   return (
     <section id="check" className="mt-8 scroll-mt-20 rounded-card bg-surface p-4 shadow-card sm:p-6">
       <h2 className="text-xl font-semibold">Check a quote</h2>
+      {checkout === "success" && (
+        <p role="status" className="mt-3 rounded-control bg-ok-soft px-3 py-2 text-sm text-[#1c7a47]">Plus is active. Run a check to see the full report.</p>
+      )}
+      {(checkout === "failed" || checkout === "invalid") && (
+        <p role="status" className="mt-3 rounded-control bg-warn-soft px-3 py-2 text-sm text-warn-ink">Checkout did not complete, so you are still on the free plan.</p>
+      )}
 
       <div className="mt-4 rounded-card bg-inset p-4">
         <p className="text-sm font-medium">No quote on hand? Try a sample.</p>
@@ -169,7 +178,7 @@ export function Checker({ samples }: { samples: Sample[] }) {
 
       {error && <p role="alert" className="mt-4 rounded-control bg-warn-soft px-3 py-2 text-sm text-warn-ink">{error}</p>}
       <div ref={resultRef} className="scroll-mt-20">
-        {result && <Verdict result={result.data} sample={result.sample} />}
+        {result && <Verdict result={result.data} sample={result.sample} pricing={pricing} />}
       </div>
     </section>
   );

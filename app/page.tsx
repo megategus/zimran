@@ -1,6 +1,7 @@
 import sampleQuotes from "@/db/seed/sample_quotes.json";
 import { CarPhoto } from "@/components/CarPhoto";
 import { Checker, type Sample } from "@/components/Checker";
+import { PRICES, TRIAL_DAYS } from "@/lib/entitlements";
 
 // Sample labels look like "Sample: 2019 Honda Civic, 34,800 mi, coolant and fuel system upsell".
 // The exact odometer comes from the quote text itself.
@@ -58,7 +59,7 @@ export default function Home() {
         ))}
       </section>
 
-      <Checker samples={samples} />
+      <Checker samples={samples} pricing={{ monthCents: PRICES.month, yearCents: PRICES.year, trialDays: TRIAL_DAYS }} />
 
       <section aria-label="Popular US models" className="mt-10">
         <h2 className="text-lg font-semibold">Built around the cars Americans drive</h2>
