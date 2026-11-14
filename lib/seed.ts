@@ -24,7 +24,7 @@ export type WarrantyRow = Sourced & {
   powertrain_years?: number; powertrain_miles?: number;
   powertrain_original_owner_only?: Limit; // limits that apply when the owner is NOT the original owner
   hybrid_years?: number; hybrid_miles?: number;
-  covered_jobs: Record<string, string[]>; // category ("powertrain" | "hybrid" | "basic" | "emissions") → job_keys
+  covered_jobs: Partial<Record<string, string[]>>; // category ("powertrain" | "hybrid" | "basic" | "emissions") → job_keys
 };
 
 export const labor = laborJson as LaborRow[];

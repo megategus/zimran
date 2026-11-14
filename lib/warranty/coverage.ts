@@ -27,7 +27,7 @@ export function warrantyCoverage(car: Car, jobKey: string, today: Date): Coverag
   const federal = warranty.find((w) => w.make === 'federal_emissions');
   const hit = [makeRow, federal]
     .filter((r): r is WarrantyRow => !!r)
-    .flatMap((row) => Object.entries(row.covered_jobs).filter(([, jobs]) => jobs.includes(jobKey)).map(([cat]) => ({ row, cat })))
+    .flatMap((row) => Object.entries(row.covered_jobs).filter(([, jobs]) => jobs?.includes(jobKey)).map(([cat]) => ({ row, cat })))
     .map(({ row, cat }) => ({ row, cat, limit: limitFor(row, cat, car) }))
     .find((x) => x.limit);
   if (!hit) {
