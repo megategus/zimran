@@ -1,6 +1,6 @@
 # Team rules for every agent
 
-Read `HACKATHON.md` first: the brief, the judging weights and the hard deadline.
+Read `HACKATHON.md` first: the brief, the judging weights and the hard deadline. Then `docs/faq-rules.md`: the organizers' FAQ rules that override anything older.
 
 ## 1. The board (pinned GitHub issue)
 
@@ -53,3 +53,7 @@ Shared files (`package.json`, lockfile, root config): only the deploy owner edit
 - No login or sign-up wall on the core flow. The jury must be able to use it cold.
 - The core value must be real (real API calls, real logic), not mocked or hardcoded. Seed data is fine; faked results are not.
 - The repo is read by the jury: no secrets committed, no dead scaffolding, a README that says what it is and how to run it.
+- Hide or remove buttons that don't work. Sample/demo data must run through real logic and be labeled as sample.
+- A working paywall with a clear price is the minimum (a pricing page alone is not enough); Stripe test mode is a plus.
+- At least one return mechanic (progress, plan, reminders) must work in the product.
+- UI in English. Keep the production link live until the end of the final on Nov 15.
