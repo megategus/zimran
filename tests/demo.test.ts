@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from 'vitest';
 
 // In-memory stand-in for the Supabase client: just the calls lib/demo.ts makes.
 const tables: Record<string, Record<string, unknown>[]> = {};
+vi.mock('../lib/schedule/modelRows', () => ({ modelRowsFor: async () => [] }));
 vi.mock('../lib/db', () => ({
   db: () => ({
     from: (t: string) => ({

@@ -2,6 +2,7 @@ import type { NextRequest } from 'next/server';
 import { db } from '@/lib/db';
 import { getGuestId } from '@/lib/guest';
 import { duePlan } from '@/lib/schedule/plan';
+import { modelRowsFor } from '@/lib/schedule/modelRows';
 import { fromRecordRow, type RecordRow } from '@/lib/records/rows';
 import { fromRow, type CarRow } from '@/lib/vehicle/cars';
 
@@ -14,5 +15,5 @@ export async function loadPlan(req: NextRequest, carId: string, today = new Date
   ]);
   if (!carRow) return null;
   const car = fromRow(carRow);
-  return { car, plan: duePlan(car, ((rows ?? []) as RecordRow[]).map(fromRecordRow), today) };
+  return { car, plan: duePlan(car, ((rows ?? []) as RecordRow[]).map(fromRecordRow), today, await modelRowsFor(car)) };
 }
