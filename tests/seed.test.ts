@@ -26,7 +26,7 @@ describe('seed tables', () => {
     const used = [
       ...schedules.map((r) => r.job_key),
       ...parts.map((r) => r.job_key),
-      ...warranty.flatMap((w) => Object.values(w.covered_jobs as Record<string, string[]>).flat()),
+      ...warranty.flatMap((w) => (Object.values(w.covered_jobs) as string[][]).flat()),
     ];
     expect(used.filter((k) => !jobs.has(k))).toEqual([]);
   });
