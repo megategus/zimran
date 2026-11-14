@@ -1,0 +1,45 @@
+{
+  "owner": "Jordan, 34, South Austin (78745), sample data",
+  "source": "assumption: synthetic owner written for the demo, not a real person",
+  "cars": [
+    { "key": "rav4", "year": 2021, "make": "Toyota", "model": "RAV4 Hybrid", "trim": "XLE", "drivetrain": "awd", "fuel": "hybrid", "state": "TX", "mileage": 38400, "originalOwner": true, "purchaseDate": "2021-03-15" },
+    { "key": "f150", "year": 2019, "make": "Ford", "model": "F-150", "trim": "XLT", "drivetrain": "4wd", "fuel": "gas", "state": "TX", "mileage": 71200, "originalOwner": false, "purchaseDate": "2023-06-01" }
+  ],
+  "records": [
+    { "car": "rav4", "daysAgo": 420, "mileage": 27900, "shop": "Lone Star Auto Care", "lines": [
+      { "jobKey": "oil_change", "label": "Synthetic oil and filter", "totalCents": 7995 },
+      { "jobKey": "tire_rotation", "label": "Tire rotation", "totalCents": 2995 } ] },
+    { "car": "rav4", "daysAgo": 240, "mileage": 32600, "shop": "South Congress Auto", "lines": [
+      { "jobKey": "oil_change", "label": "Synthetic oil and filter", "totalCents": 8495 },
+      { "jobKey": "tire_rotation", "label": "Tire rotation", "totalCents": 2995 },
+      { "jobKey": "coolant_flush", "label": "Coolant flush", "totalCents": 18900 } ] },
+    { "car": "rav4", "daysAgo": 60, "mileage": 37400, "shop": "Manchaca Road Garage", "lines": [
+      { "jobKey": "oil_change", "label": "Synthetic oil and filter", "totalCents": 8495 },
+      { "jobKey": "tire_rotation", "label": "Tire rotation", "totalCents": 2995 },
+      { "jobKey": "cabin_air_filter", "label": "Cabin air filter", "totalCents": 4900 } ] },
+    { "car": "f150", "daysAgo": 410, "mileage": 58300, "shop": "Lone Star Auto Care", "lines": [
+      { "jobKey": "oil_change", "label": "Oil and filter, 5W-30", "totalCents": 9995 },
+      { "jobKey": "tire_rotation", "label": "Tire rotation", "totalCents": 2995 } ] },
+    { "car": "f150", "daysAgo": 300, "mileage": 61500, "shop": "South Congress Auto", "lines": [
+      { "jobKey": "brake_pads_front", "label": "Front brake pads", "totalCents": 38900 } ] },
+    { "car": "f150", "daysAgo": 200, "mileage": 64200, "shop": "Lone Star Auto Care", "lines": [
+      { "jobKey": "oil_change", "label": "Oil and filter, 5W-30", "totalCents": 9995 },
+      { "jobKey": "battery", "label": "Battery replacement", "totalCents": 24900 },
+      { "jobKey": "fuel_injector_cleaning", "label": "Fuel injection service", "totalCents": 17900 } ] }
+  ],
+  "quoteChecks": [
+    { "car": "rav4", "daysAgo": 241, "mileage": 32600, "text": "South Congress Auto estimate: synthetic oil change $84.95, tire rotation $29.95, coolant flush $189.00", "lines": [
+      { "raw": "Synthetic oil change $84.95", "jobKey": "oil_change", "totalCents": 8495 },
+      { "raw": "Tire rotation $29.95", "jobKey": "tire_rotation", "totalCents": 2995 },
+      { "raw": "Coolant flush $189.00", "jobKey": "coolant_flush", "totalCents": 18900 } ] },
+    { "car": "f150", "daysAgo": 301, "mileage": 61500, "text": "South Congress Auto quote: front brake pads $389.00", "lines": [
+      { "raw": "Front brake pads $389.00", "jobKey": "brake_pads_front", "totalCents": 38900 } ] },
+    { "car": "f150", "daysAgo": 20, "mileage": 70900, "text": "Lone Star Auto Care estimate: oil change $99.95, engine air filter $69.00, shop supplies $24.50", "lines": [
+      { "raw": "Oil change $99.95", "jobKey": "oil_change", "totalCents": 9995 },
+      { "raw": "Engine air filter $69.00", "jobKey": "engine_air_filter", "totalCents": 6900 },
+      { "raw": "Shop supplies $24.50", "jobKey": null, "totalCents": 2450 } ] }
+  ],
+  "documents": [
+    { "car": "rav4", "kind": "insurance", "expiresInDays": 21 }
+  ]
+}
